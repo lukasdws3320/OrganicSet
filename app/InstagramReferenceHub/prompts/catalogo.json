@@ -1,0 +1,654 @@
+{
+  "versao": 1,
+  "atualizado_em": "2026-10-26",
+  "origem": {
+    "rotulo": "OP 001 · Conteúdos IA",
+    "pasta": "WILLHAPPENED/02 - OP 001/Conteúdos IA/Prompts IAs/",
+    "vault": "05_Biblioteca/03_recursos/Prompts-Geracao/"
+  },
+  "aviso": "O acervo inclui prompts legados de jul–ago/2026 (Flow/Omni) e modelos PERS de 26/10/2026 para personagens e contact sheets. As regras antigas de voz não substituem o perfil/plano atual. Os modelos PERS estão prontos para preencher, mas não foram testados em novas gerações.",
+  "prompts": [
+    {
+      "id": "FOTO-01",
+      "titulo": "Swimsuit vermelho + banana + Dr. Pepper",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "thumb/cena scroll-stopper — cena absurda-casual com bandeira americana (codifica \"gringa\"). Paleta travada por HEX.",
+      "blocos": [
+        "A straight-on medium close-up captures a young Caucasian woman, estimated to be in her late 30s to early 40s, with a fresh, radiant youthful glow and striking model-like facial features, seated outdoors on a porch with a subtle, confident facial expression. She is wearing a red, glossy one-piece swimsuit with thin straps that elegantly frame her smooth shoulders and gently accentuate the soft, full contours of her chest. Her light, shoulder-length blonde hair is voluminous and styled in loose waves, giving a sun-kissed vibe. She holds a peeled banana upright in one hand and, with her other hand, pours Dr. Pepper soda from a glass bottle over the top, causing the soda to run down the banana and splash onto a shiny, white table below, which is stained with brown soda splatter. In the background, an American flag is visible to the upper right, angled against blue siding, and a large potted fern adds greenery on the right side of the frame. The scene is captured in bright, natural daylight, casting soft, ambient shadows and providing a clean, vibrant color palette, dominated by red, yellow, white, blue, and green tones. The composition is tightly framed at eye level, placing the woman and her actions centrally and employing a wide-angle smartphone lens for sharp focus and minimal depth of field. The atmosphere is playful, casual, and subtly mischievous. HEX VALUES: [\"#dce1e5\", \"#d4d1c9\", \"#bb8566\", \"#a77151\", \"#895835\", \"#bfbdb2\", \"#ceaa90\", \"#78725e\", \"#969890\", \"#5b4c34\", \"#c0252c\", \"#2a2211\", \"#37373b\", \"#dfb24c\"]"
+      ],
+      "notas": [],
+      "familia": "Cena descritiva",
+      "tag": "cena",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "FOTO-02",
+      "titulo": "Selfie high-angle com árvore de Natal (bokeh)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "foto \"de perfil real\" do avatar — selfie caseira festiva, portrait mode com blur exagerado pra vender autenticidade de celular.",
+      "blocos": [
+        "A high-angle close-up selfie captures a young Caucasian woman, likely in her late 30s or early 40s, like a milf, holding the camera above her head. She has medium-length, softly curled light brown hair and is wearing a powder blue plaid dress with ruffled sleeves and a very deep neckline that highlights her upper torso. Her skin appears smooth and illuminated, with model-like features, and she has a nose piercing in her left nostril. The background reveals a warmly lit room with a hardwood floor and a visibly out-of-focus Christmas tree adorned with multicolored lights and ornaments, creating a festive, bokeh-rich atmosphere. The composition centers her face and chest, utilizing a smartphone's portrait mode setting; the shallow lens depth produces an exaggerated foreground-and-background separation, accentuating her features while blending background details into a soft haze. Dominant colors include light blue, warm skin tones, blonde and brown hair, golden hardwood, and muted reds and greens from the holiday decorations. The overall mood is warm, inviting, and festive, stylized with a modern digital camera aesthetic and significant artificial lens blur, sexy. HEX VALUES: [\"#6e4024\", \"#875432\", \"#4c2309\", \"#62310e\", \"#eeab90\", \"#9c6b45\", \"#9e9dac\", \"#301809\", \"#d39377\", \"#b1b5cb\", \"#1a0c05\", \"#9ab0e2\", \"#b57e5a\", \"#8c858f\", \"#7b6965\"]"
+      ],
+      "notas": [],
+      "familia": "Cena descritiva",
+      "tag": "cena",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "FOTO-03",
+      "titulo": "Trocar a pessoa da foto (swap mantendo roupa)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "colocar o avatar numa cena/pose de referência — troca a pessoa da Image 2 pela da Image 1 preservando a roupa.",
+      "blocos": [
+        "change the man of the photo @Image 2 by the man of the photo @Image 1, keep clothes of the man @Image 1"
+      ],
+      "notas": [],
+      "familia": "Edição e swap",
+      "tag": "edicao",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "FOTO-04",
+      "titulo": "Close-up facial realista (iPhone)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "close do rosto do avatar pra usar como referência de identidade (input de image-to-video, foto de perfil).",
+      "blocos": [
+        "give-me a close up of this man focusing on her facial features, iphone camera shoot, sharp and realistic skin, not plastic"
+      ],
+      "notas": [],
+      "familia": "Edição e swap",
+      "tag": "edicao",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "FOTO-07",
+      "titulo": "Swap completo com pack de identidade",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "recriar a foto-alvo trocando a mulher da cena pelo avatar usando pack de identidade (3 ângulos + roupa em referência separada), integração total (grading, ângulo, pose, objetos) e proporções corporais do avatar. Anexar: @Image 1 = foto-alvo · @Image 2 @Image 3 @Image 5 = avatar em ângulos (rosto no 5) · @Image 4 = roupa.",
+      "blocos": [
+        "recreate this image @Image 1 with same background, same lighting, improve quality, but change the woman of the photo @Image 1 by the woman in the photos @Image 2 @Image 3 @Image 4 @Image 5 (it's the same woman, but in different angles, her face is in @Image 5, must be without glasses, and with the clothes of @Image 4)\n\nthe woman must be part of the image, like one, must apply the filters, the color grading, the angle, the pose, the objects, the context of the photo @Image 1; will not recreate the woman of the photo @Image 1. Must keep the body proportions of the woman of photos @Image 2 @Image 3 @Image 5"
+      ],
+      "notas": [],
+      "familia": "Edição e swap",
+      "tag": "edicao",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "FOTO-08",
+      "titulo": "Swap simples com integração total (1 foto de identidade)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "swap rápido quando uma foto do avatar segura a identidade. Versão leve do FOTO-07, sem pack. @Image 1 = foto-alvo · @Image 2 = avatar. Não trava figurino — precisando da roupa do avatar, subir pro FOTO-07.",
+      "blocos": [
+        "recreate this image @Image 1 with same background, same lighting, improve quality, but change the woman by the woman in the photo @Image 2\n\nshe must be part of the image, like one, must apply the filters, the color grading, the angle, the pose of the photo @Image 1, will not recreate the woman of the photo @Image 1"
+      ],
+      "notas": [],
+      "familia": "Edição e swap",
+      "tag": "edicao",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "FOTO-05",
+      "titulo": "Contact sheet 16:9 (4 cenários, mesmo avatar)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "banco de fotos \"de vida real\" do avatar de uma vez — identidade travada, cenários variados. Adaptar o miolo (vibe, profissão, nº de cenários) por avatar.",
+      "blocos": [
+        "Generate a 16:9 contact sheet grid using this exact person from the reference image <<<image_1>>> Keep the same identity in every frame with consistent facial structure, skin tone, hairstyle, and proportions.\nCreate 4 everyday scenario, brasil vibes, fitness coach. Vary environments, outfits, and activities while keeping the person instantly recognizable. Use iPhone style photography, natural lighting, realistic skin texture with visible pores, minimal retouching, and casual framing. Include indoor selfies, outdoor street shots, cafe scenes, home lifestyle moments, and candid walking shots.\nNo cinematic lighting, no stylized color grading, no beauty filters"
+      ],
+      "notas": [],
+      "familia": "Consistência de personagem",
+      "tag": "consistencia",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "FOTO-06",
+      "titulo": "Retrato limpo estilo influencer (fundo neutro)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "retrato \"oficial\" do avatar — fundo branco/cinza, luz frontal natural, meio corpo. Bom pra capa de perfil e materiais da marca. Trocar o red scrub pela roupa do avatar.",
+      "blocos": [
+        "Create a photo of this same woman, studio portrait shot with a clean, minimalist aesthetic. The lighting is natural, and frontal, minimizing shadows and highlighting the subject's features. The color palette is neutral and predominantly, creating a clean and fresh feel. Eye contact with camera lens. Visible skin texture, no retouching. Vlog, influencer aesthetic, not professional studio setup. The background is a plain, bright white or light gray wall, providing a distraction-free backdrop. The composition is centered, framing the subject in a tight medium-close-up. The overall mood is direct, polished, and contemporary, typical of social media portraits. Capture the photo from head to the beginning of the legs. Keep the exactly same proportions of her body, keep the red scrub."
+      ],
+      "notas": [],
+      "familia": "Consistência de personagem",
+      "tag": "consistencia",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "VID-01",
+      "titulo": "Depoimento \"el test\" (glúteo) — ES · calmo",
+      "midia": "video",
+      "tipo": "prompt",
+      "uso": "depoimento confessional, meio de funil (por que nada funcionava antes → o mecanismo). Tom de amiga contando história.",
+      "blocos": [
+        "Make the woman speaks in Spanish, saying:\n--\n\"\nY pensé: ¿por qué no? No tenía nada que perder.\n—\nEse test era diferente. Me ayudó a entender por qué mi glúteo seguía dormido, caído y sin responder, incluso cuando hacía ejercicios como sentadillas y zancadas.\n\"\n--\nVOICE: normal tone, gently happy, conversational, like talking to a friend.\n\nBODY LANGUAGE: her hands stay relaxed and mostly still, resting naturally and loosely. She makes only small, subtle, minimal hand movements while talking, small gestures with hand\n\nCAMERA: static shot, fixed camera angle, no zoom in, no zoom out, no camera movement, UGC style\n\nSTYLE: UGC, no music"
+      ],
+      "notas": [],
+      "familia": "Talking-head",
+      "tag": "talking-head",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Vídeo.md"
+    },
+    {
+      "id": "VID-02",
+      "titulo": "Mecanismo + timeline de resultados (glúteo 30+) — ES · influencer",
+      "midia": "video",
+      "tipo": "prompt",
+      "uso": "body de conteúdo — quebra a crença (\"esses exercícios roubam o estímulo\") + promessa com timeline 7/14/28 dias. Energia de influencer, selfie na mão.",
+      "blocos": [
+        "Make this woman talks with the camera, like a influencer, UGC style, like a famous person, animated talk, talks in spanish:\n--\n\"Sentadillas, zancadas búlgaras, peso muerto sumo, todos esos ejercicios le roban el estímulo al glúteo.\n-\nEsta secuencia activa hasta el glúteo más tímido después de los treinta años y hace que vuelva a responder.\n-\nEn siete días, ya lo sientes quemando diferente.\nEn dos semanas, ves la curva en el espejo.\nEn cuatro semanas, la cola queda más redondeada, firme y suave.\n\"\n--\nno music, no zoom in, no zoom out, like an influencer, like a conversation between friends, keep the camera angle, animated voice, she hold the phone with one hand, selfie angle, she looks to the camera, eyes, looking to the camera, natural looking"
+      ],
+      "notas": [],
+      "familia": "Talking-head",
+      "tag": "talking-head",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Vídeo.md"
+    },
+    {
+      "id": "VID-03",
+      "titulo": "Hook \"sin pisar el gimnasio\" — ES · fast talk",
+      "midia": "video",
+      "tipo": "prompt",
+      "uso": "hook de abertura (primeiros 3s) — indignação fake + curiosidade. Fala rápida e animada.",
+      "blocos": [
+        "Make this woman talks with the camera, like a influencer, UGC style, like a famous person, animated talk, fast talk, fast voice, animated, talks in spanish:\n--\n\"Juro que voy a enloquecer si alguien más me pregunta cómo hice para levantar la cola sin pisar el gimnasio!\"\n--\nno music, no zoom in, no zoom out, like an influencer, like a conversation between friends, keep the camera angle, fast voice, animated voice"
+      ],
+      "notas": [
+        "[!warning] Trecho possivelmente incompleto No material original havia um anexo \"text #1 +6 lines\" junto deste prompt que não veio no paste. Se existir versão mais longa, colar aqui por cima."
+      ],
+      "familia": "Talking-head",
+      "tag": "talking-head",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Vídeo.md"
+    },
+    {
+      "id": "VID-04",
+      "titulo": "Receita cebola + gengibre + mel + limão — EN · calmo",
+      "midia": "video",
+      "tipo": "prompt",
+      "uso": "conteúdo de receita/remédio caseiro (nutra orgânico gringa) — passo a passo curto, tom de creator viral. Usa imagem de referência do avatar.",
+      "blocos": [
+        "Make the woman <<<image_1>>> speaks in English, saying:\n--\n\"\nGrate one red onion and a piece of ginger, toss them into a glass jar, add three tablespoons of honey, and squeeze the juice of one lemon on top.\n\"\n--\nVOICE: happy tone, gently happy, conversational, viral content creator,\n\nBODY LANGUAGE: her hands stay relaxed, she makes only small, minimal hand movements while talking...\n\nCAMERA: static shot, fixed camera angle, no zoom in, no zoom out, no camera movement, UGC style\n\nSTYLE: UGC, no music"
+      ],
+      "notas": [],
+      "familia": "Talking-head",
+      "tag": "talking-head",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Vídeo.md"
+    },
+    {
+      "id": "VID-05",
+      "titulo": "Trocar roupa + identidade no vídeo (swap)",
+      "midia": "video",
+      "tipo": "prompt",
+      "uso": "aproveitar um vídeo-fonte pronto trocando a roupa (@Image1) e o rosto/identidade pelo do avatar (@Image2) — vira variação nova sem regravar nada.",
+      "blocos": [
+        "Replace the sweater in @Video1 with the beige sweater in @Image1, and change the model in the video to look like the person in @Image2"
+      ],
+      "notas": [
+        "[!note] Reconstruído do paste O original veio embaralhado (\"Replace the sweater in @Video1 with the beige sweater in / model in the video to look like the person in @image2 / @image1\"). Remontei na ordem lógica: roupa via @Image1, identidade via @Image2. Se a versão que funcionou era outra, colar por cima."
+      ],
+      "familia": "Swap de vídeo",
+      "tag": "swap-video",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Vídeo.md"
+    },
+    {
+      "id": "REC-01",
+      "titulo": "Prompt base de imagem (swap na cena, ES)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "trocar a pessoa de uma foto de referência pelo avatar mantendo luz, sombra, grading, profundidade e roupa do corpo inteiro. Base pra gerar o still inicial antes de animar.",
+      "blocos": [
+        "Recreate @IMAGEM.png but replace the --- with the --- from @CORPOTODO01.png matching the lighting, shadows, color grade, depth of field and overall camera look of @IMAGEM.png\n\nThe face, hair, body, body proportions, size, outfit and clothes reference is from the woman @CORPOTODO01.png\n\nHigh-resolution, sharp focus.\n\nKeep the body proportions and size of @CORPOTODO01.png. Keep the same clothes of @CORPOTODO01.png."
+      ],
+      "notas": [],
+      "familia": "Receita por cena",
+      "tag": "imagem-base",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Receita.md"
+    },
+    {
+      "id": "REC-02",
+      "titulo": "Visão (ES) — 7 cenas com Delivery/Audio/Identity",
+      "midia": "receita",
+      "tipo": "prompt",
+      "uso": "roteiro hispano completo (nutra de visão: espinafre + arándanos + chía) no molde Veo — cada cena repete bloco de voz, ação, Delivery, Audio e Identity. CTA \"Comenta VISIÓN\".",
+      "blocos": [
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera.\n\"Decile adiós a la visión borrosa en solo una noche. \nY no, no necesitas pagar 4 mil dólares por esto\"\n-\nShe puts water on the dirt big and old eye in her hands and it starts to clean and get young \n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes",
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera. She speak fast, saying: \n\n\"Agrega una taza de espinaca congelada\"\n\n￼CUT\n\n\"una taza de arándanos congelados\"\n\nCUT\n\n\"una cucharada de semillas de chía\"\n-\nShe puts the ingredientes in the blender\n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes",
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera. She speak fast, saying: \n\n￼CUT\n\n \"y una taza de agua o leche\"\n\nCUT\n\n\"Licúa todo hasta que quede bien suave.\"\n-\nShe puts the ingredientes in the blender, last frame start it and mix, the liquid gets green to purple when  mixed\n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes",
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera. She speak fast, saying: \n\n\"Este licuado le da a tus ojos un reinicio que nadie te contó. La espinaca tiene antioxidantes que los protegen de la luz fuerte.\"\n-\nShe holds the glass\n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes",
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera. She speak fast, saying: \n\"Los arándanos fortalecen los vasos sanguíneos de tus ojos. Y la chía los mantiene hidratados con omega-3. \"\n-\nShe holds the glass\n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes",
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera. She speak fast, saying: \n\"La gente que toma esto todas las mañanas me dice lo mismo: la niebla se va, la pantalla se ve más nítida, la tensión a la noche desaparece. \"\n-\nShe holds the glass\n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes",
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera. She speak fast, saying: \n\"Esto no es ningún truco mágico, son tus ojos finalmente haciendo lo que fueron diseñados para hacer. \"\n-\nShe holds the glass\n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes",
+        "A 40 years old female voice, clear and gentle, confident, direct, speaking Spanish, facing the camera. She speak fast, saying: \n\"Comenta VISIÓN y te envío una receta 3 veces más poderosa directo a tus mensajes.\nSígueme primero para que pueda enviártela — si no, no puedo contactarte \"\n-\nShe holds the glass\n-\nDelivery: clear, projected, confident, normal conversational volume, foreground audio, crisp enunciation, brisk conversational pace.\nAudio: clean dialogue only, soft skin-rubbing foley, natural room tone, no background music.\nIdentity: use the images as the exact identity references — keep the face, hair, wardrobe, clothes"
+      ],
+      "notas": [],
+      "familia": "Receita por cena",
+      "tag": "receita",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Receita.md"
+    },
+    {
+      "id": "REC-03",
+      "titulo": "Bicarbonato (COPY0069) — 4 stills + CTA em EN",
+      "midia": "receita",
+      "tipo": "prompt",
+      "uso": "receita de bicarbonato com limão, molde PT-BR curto (\"Mulher fala em inglês... Sem música de fundo ou efeitos sonoros. Apenas a voz.\") — decreto de 20/08/2026 em ação. Cada bloco é uma geração separada, ancorada no still do SHOT.",
+      "blocos": [
+        "Mulher fala em inglês, com um tom de voz normal e fala acelerada, ela diz: \"This is what baking soda does to the sugar in your body.\". Ela segura a caixa de bicarbonato com a mão direita e despeja o pó na barriga da mulher deitada, com a mão esquerda aberta pairando sobre a espuma, olhando para a câmera o tempo todo. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Mulher fala em inglês, com um tom de voz normal e fala acelerada, ela diz: \"In a glass of warm water, mix one tablespoon of baking soda. Squeeze of fresh lemon juice.\". Ela despeja a colher de bicarbonato no copo com a mão direita enquanto a mão esquerda segura o copo, depois espreme uma metade de limão com cada mão dentro do copo, olhando para o copo ao despejar e depois para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Mulher fala em inglês, com um tom de voz normal e fala acelerada, ela diz: \"Drink this every morning for seven days on an empty stomach. People start asking questions. What are you doing differently? Did you lose weight?\". Ela ergue o copo no ar com as duas mãos, a esquerda no lado oposto e a direita apoiando por baixo, e o apoia de volta na mesa, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Mulher fala em inglês, com um tom de voz normal e fala acelerada, ela diz: \"But there is one secret ingredient I always take with this to get results ten times faster.\". Ela mantém o copo apoiado na mesa com as duas mãos em concha na base e se inclina um pouco para a frente nas últimas palavras, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ela diz: \"But there is one secret ingredient I always take with this to get results ten times faster. If I shared it here, they would take it down.\". Ela mantém o copo apoiado na mesa com as duas mãos em concha na base e se inclina um pouco para a frente nas últimas palavras, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ela diz: \"Comment yes, and I'll send it to you. Follow me first or I can't reach you.\". Ela abre as mãos em volta do copo, estende a mão direita aberta em direção à câmera e a recolhe para o lado do copo, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz."
+      ],
+      "notas": [],
+      "familia": "Receita por cena",
+      "tag": "receita",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Receita.md"
+    },
+    {
+      "id": "REC-04",
+      "titulo": "Linfático / inchaço (COPY0041) — 13 shots EN",
+      "midia": "receita",
+      "tipo": "prompt",
+      "uso": "roteiro completo de drenagem (abacaxi + gengibre + caiena + água de coco → Rhodiola). Cada bloco é uma geração, ancorada no still do shot correspondente. CTA \"Comment yes\".",
+      "blocos": [
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"Say goodbye to swollen ankles before you spend another day hiding them in longer pants and skirts. And no, you don't need to waste your money on expensive prescriptions that won't work.\". Ele despeja a água da jarra sobre o modelo de pé inchado com a mão direita enquanto a mão esquerda apoia o modelo, depois pousa a jarra na bancada, olhando para o modelo ao despejar e depois para a câmera. Onde a água toca o pé-modelo, o tornozelo severamente inchado e avermelhado desincha visivelmente, perdendo volume, enquanto um vapor branco fino sobe do ponto de contato. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"Add one cup of frozen pineapple chunks and Comment yes, if you're waking up puffy hun, so I know how many of you are dealing with this,\". Ele despeja a tigela de abacaxi congelado no copo do liquidificador com as duas mãos, olhando para o copo ao despejar e depois para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"add one thumb of fresh ginger, a pinch of cayenne pepper, and one cup of coconut water.\". Ele solta o pedaço de gengibre no copo do liquidificador com a mão direita, polvilha a caiena e despeja a água de coco enquanto a mão esquerda estabiliza o copo, olhando para os ingredientes e depois para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"Blend everything together until it's completely smooth. Then\". Ele coloca a tampa no liquidificador e aperta o botão da base enquanto os ingredientes viram um líquido rosa, olhando para o liquidificador e depois para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"this drink hits your body like a reset button Nobody told you existed I've spent twenty years watching what inflammation does to women's bodies.\". Ele segura o copo alto de smoothie rosa com as duas mãos à altura do peito, com gestos sutis enquanto fala e sem beber, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"Pineapple has bromelain, a natural enzyme that breaks down what your body is holding onto. It targets the inflammation causing all that puffiness.\". Ele mantém o copo de smoothie rosa nas duas mãos, com gestos leves das pontas dos dedos em volta do copo e sem beber, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"Ginger and cayenne fire through the inflammation and open up your circulation so the water your body's been storing has somewhere to go. And coconut water pulls the excess back into balance.\". Ele segura o copo na mão esquerda enquanto a mão direita faz pequenos gestos expressivos a cada ponto, sem beber, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"This recipe brings the puffiness down in eighty percent of the women I share it with. But some of you have a deeper issue, and there's only one adaptogen I give my clients.\". Ele segue com o copo na mão e gesticula com a mão livre em direção à câmera na virada da fala, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"The women taking it always tell me the same thing. The puffiness lifts, the tight feeling goes away. The swelling stops coming back.\". Ele segura o frasco conta-gotas âmbar com a mão direita virado para a câmera, mostrando o rótulo, enquanto a mão esquerda gesticula perto do peito, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"This is your body finally releasing the water it's been holding onto for years. This adaptogen is called Rhodiola rosea.\". Ele mantém o frasco conta-gotas apontado para a câmera na mão direita enquanto a mão esquerda gesticula aberta, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"It's an ancient plant that lowers the cortisol, driving the inflammation. Comment yes, and I'll send you the link to the rhodiola I trust\". Ele segura o frasco firme na mão direita e estende a palma esquerda aberta em direção à câmera durante a chamada, olhando para a câmera com um sorriso convidativo. Sem música de fundo ou efeitos sonoros. Apenas a voz.",
+        "Pessoa fala em inglês, com um tom de voz normal e fala acelerada, ele diz: \"you can also find it in the caption below. Every day, I share one thing I've learned about women's health. Follow along, hun.\". Ele segura o frasco na mão direita, acenando e gesticulando com a mão esquerda para fechar, olhando para a câmera. Sem música de fundo ou efeitos sonoros. Apenas a voz."
+      ],
+      "notas": [
+        "[!note] Origem Blocos vieram dos rascunhos de 22/07 (COPY0069) e 08/08 (COPY0041), com anotações de still/TAKE por shot. Os # ShotNN abaixo mantêm a numeração original do autor."
+      ],
+      "familia": "Receita por cena",
+      "tag": "receita",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Receita.md"
+    },
+    {
+      "id": "TPL-FOTO-A",
+      "titulo": "Cena descritiva (\"caption reverso\")",
+      "midia": "foto",
+      "tipo": "template",
+      "uso": "Descrever a imagem como se fosse o alt-text de uma foto real, nesta ordem:",
+      "blocos": [
+        "[ENQUADRAMENTO + ÂNGULO: A straight-on medium close-up / A high-angle close-up selfie...] captures [SUJEITO: idade estimada, etnia, traços — \"model-like features\", \"smooth illuminated skin\"...], [ROUPA: peça, cor, textura, o que ela destaca], [CABELO: cor, comprimento, styling]. [AÇÃO + PROPS: o que ela faz com as mãos, objetos em cena]. [FUNDO: ambiente, objetos reconhecíveis, profundidade]. [LUZ: natural daylight / warmly lit, sombras, atmosfera]. [COMPOSIÇÃO + LENTE: centered, eye level, smartphone wide-angle / portrait mode, shallow depth of field]. [PALETA: cores dominantes]. [MOOD: playful, casual, warm, inviting...]. HEX VALUES: [\"#......\", \"#......\", ...]"
+      ],
+      "notas": [
+        "[!tip] O que faz parecer real - Sempre \"smartphone lens\" / \"portrait mode\" / \"iPhone style\" — nunca cinematic. - Detalhes de imperfeição ancoram o realismo (respingo na mesa, bokeh estourado, piercing). - A lista de HEX VALUES no final trava a paleta e dá consistência de \"feed\"."
+      ],
+      "familia": "Moldes",
+      "tag": "molde",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "TPL-FOTO-B",
+      "titulo": "Edição / instrução direta",
+      "midia": "foto",
+      "tipo": "template",
+      "uso": "",
+      "blocos": [
+        "[AÇÃO: change / give me a close up / create a photo of this same woman...] [REFERÊNCIAS: @Image 1, @Image 2, <<<image_1>>>], keep [O QUE NÃO PODE MUDAR: clothes, proportions, identity, facial structure]. [ACABAMENTO: iphone camera shoot, sharp and realistic skin, not plastic, visible skin texture, no retouching]"
+      ],
+      "notas": [],
+      "familia": "Moldes",
+      "tag": "molde",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "TPL-FOTO-B2",
+      "titulo": "Swap com pack de identidade (multi-ângulo + roupa)",
+      "midia": "foto",
+      "tipo": "template",
+      "uso": "Slots: @Image 1 = foto-alvo (cena/pose/objetos/grading) · @Image 2 @Image 3 @Image 5 = avatar em ângulos diferentes (o rosto na mais nítida) · @Image 4 = roupa.",
+      "blocos": [
+        "recreate this image @Image 1 with same background, same lighting, improve quality, but change the [woman/man] of the photo @Image 1 by the [woman/man] in the photos @Image 2 @Image 3 @Image 4 @Image 5 (it's the same [woman/man], but in different angles, [her/his] face is in [@Image do rosto], [AJUSTES: must be without glasses / and with the clothes of @Image 4])\n\nthe [woman/man] must be part of the image, like one, must apply the filters, the color grading, the angle, the pose, the objects, the context of the photo @Image 1; will not recreate the [woman/man] of the photo @Image 1. Must keep the body proportions of the [woman/man] of photos [@Images do corpo]"
+      ],
+      "notas": [],
+      "familia": "Moldes",
+      "tag": "molde",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    },
+    {
+      "id": "TPL-VIDEO-A",
+      "titulo": "Talking-head UGC",
+      "midia": "video",
+      "tipo": "template",
+      "uso": "Anatomia que se repete em tudo que funcionou: instrução de cena → script entre -- → blocos de direção (VOICE / BODY LANGUAGE / CAMERA / STYLE).",
+      "blocos": [
+        "Make the woman <<<image_1>>> speaks in [IDIOMA: Spanish / English], saying:\n--\n\"\n[SCRIPT — frases curtas; separar blocos de fala com \"—\" ou \"-\" para criar pausas naturais]\n\"\n--\nVOICE: [tom — ex.: normal tone, gently happy, conversational, like talking to a friend / animated voice, fast voice]\n\nBODY LANGUAGE: [mãos — ex.: her hands stay relaxed and mostly still, only small, subtle, minimal hand movements while talking]\n\nCAMERA: [enquadramento — ex.: static shot, fixed camera angle, no zoom in, no zoom out, no camera movement / selfie angle, she holds the phone with one hand, she looks to the camera]\n\nSTYLE: UGC, no music"
+      ],
+      "notas": [
+        "[!tip] Dois modos de energia - Calmo/confessional (depoimento, receita): normal tone, gently happy, conversational + mãos quase paradas + câmera estática. - Influencer/animado (hook, lista de resultados): animated talk, fast voice, like a famous person, like a conversation between friends + selfie angle segurando o celular + olhar cravado na lente (she looks to the camera, eyes, looking to the camera, natural looking). Em todos: no music, no zoom in, no zoom out, keep the camera angle."
+      ],
+      "familia": "Moldes",
+      "tag": "molde",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Vídeo.md"
+    },
+    {
+      "id": "TPL-VIDEO-B",
+      "titulo": "Edição de vídeo (swap com referências)",
+      "midia": "video",
+      "tipo": "template",
+      "uso": "[!tip] Regras do swap - Uma referência por papel: @Video1 = vídeo-fonte · @Image1 = ref de roupa/objeto · @Image2 = ref de identidade (rosto do avatar). - Nomear o elemento com precisão (\"the beige sweater\", não \"the clothes\"). - Dá pra combinar troca de roupa + identidade no mesmo prompt (VID-05).",
+      "blocos": [
+        "[AÇÃO: Replace / change...] the [ELEMENTO: sweater, outfit, background...] in @Video1 with the [ELEMENTO NOVO: beige sweater...] in @Image1, and change the model in the video to look like the person in @Image2"
+      ],
+      "notas": [
+        "[!tip] Regras do swap - Uma referência por papel: @Video1 = vídeo-fonte · @Image1 = ref de roupa/objeto · @Image2 = ref de identidade (rosto do avatar). - Nomear o elemento com precisão (\"the beige sweater\", não \"the clothes\"). - Dá pra combinar troca de roupa + identidade no mesmo prompt (VID-05)."
+      ],
+      "familia": "Moldes",
+      "tag": "molde",
+      "status": "legado",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Vídeo.md"
+    },
+    {
+      "midia": "video",
+      "familia": "Edição e motion graphics",
+      "status": "atual",
+      "motor": "Claude Code + HyperFrames (out/2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Edição de Vídeo.md",
+      "id": "EDIT-01",
+      "titulo": "Vídeo de apresentação em motion graphics (showreel)",
+      "tipo": "template",
+      "tag": "edicao",
+      "uso": "Pedir ao Claude um vídeo de motion graphics do zero (showreel, abertura, apresentação de produto). Troque os colchetes.",
+      "blocos": [
+        "Crie um vídeo de motion graphics dinâmico de [NUMERO] segundos que mostre o quanto você é um motion designer incrível, como se fosse o seu showreel para um currículo. Capriche ao máximo.\nContexto para personalizar:\n- Nome ou marca: [SEU NOME / MARCA]\n- Estilo visual e cores: [EX: MINIMALISTA EM PRETO E LARANJA NEON]\n- Textos que devem aparecer: [EX: FRASE DE IMPACTO, HABILIDADES]\n- Formato: [16:9, 9:16 OU 1:1]\n- Chamada final: [SITE, E-MAIL OU @]"
+      ],
+      "notas": [
+        "Fonte: Notion \"Prompts de Edição de vídeo com o Claude\" (achiaraca), salvo em 23/10/2026.",
+        "Rodar com a skill /hyperframes instalada (~/.claude/skills/hyperframes). Referências visuais: https://whatships.com/"
+      ]
+    },
+    {
+      "midia": "video",
+      "familia": "Edição e motion graphics",
+      "status": "atual",
+      "motor": "Claude Code + HyperFrames (out/2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Edição de Vídeo.md",
+      "id": "EDIT-02",
+      "titulo": "B-roll com IA dentro de um vídeo de produto",
+      "tipo": "template",
+      "tag": "edicao",
+      "uso": "Trocar a abertura de um vídeo de apresentação por uma cena gerada com IA (personagem vivendo o problema), mantendo o resto da edição. Aprovação da imagem-base antes de gerar o vídeo.",
+      "blocos": [
+        "Baseado nesse video de apresentação do produto: [ANEXAR O VÍDEO]\n\nCrie um video com um personagem passando por esse problema relatado no início do vídeo, coloque essa pessoa, [PERSONAGEM: EX. UM HOMEM DE 30 ANOS], em um cenário de [CENÁRIO: EX. TRABALHO NO COMPUTADOR]. Faça a transição para o \"[FRASE DE VIRADA DO VÍDEO: EX. Conheça o Resposta Pronta...]\"\nDeixe o restante da apresentação como está. Use [FERRAMENTA: Higgsfield / Flow-Omni] para gerar o vídeo do [PERSONAGEM].\n\nAntes de iniciar a geração do vídeo, explique o conceito do que você vai criar em um roteiro e gere uma imagem de base para o vídeo que você vai gerar. Se eu aprovar a imagem ou pedir alterações, uma vez que eu concordar com a imagem de base, siga para a geração do vídeos seguindo fielmente a imagem de base."
+      ],
+      "notas": [
+        "Fonte: Notion \"Prompts de Edição de vídeo com o Claude\" (achiaraca), 23/10/2026. Original citava \"um homem de 30 anos\", \"trabalho no computador\" e \"Conheça o resposta pronta\"; viraram campos.",
+        "Geração gasta crédito: só rodar com pedido e orçamento (Higgsfield via skill higgsfield-visual-director; Flow via flow-mcp)."
+      ]
+    },
+    {
+      "midia": "video",
+      "familia": "Edição e motion graphics",
+      "status": "atual",
+      "motor": "Claude Code + HyperFrames (out/2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Edição de Vídeo.md",
+      "id": "EDIT-03",
+      "titulo": "Editar Reels/anúncio com apresentador (skill edit-reels)",
+      "tipo": "prompt",
+      "tag": "edicao",
+      "uso": "Takes brutos + roteiro → Reels/anúncio 9:16 cortado pela transcrição, com telas/provas, legendas 2–3 palavras, cartelas e CTA. Plano em tabela antes de montar.",
+      "blocos": [
+        "Usando /edit-reels, edita esse anúncio.\n- Takes brutos: [PASTA DOS TAKES]\n- Roteiro: [ARQUIVO OU TEXTO]\n- Identidade visual: [CORES / FONTES / LOGO]\n- Telas e provas: [URL, LOCALHOST, PRINTS OU \"não há\"]\n- Destino e CTA: [Meta Ads / Reels / TikTok / Shorts] · [EX: comente CARDÁPIO]\n- Duração e versões: [duração natural · 1 versão]"
+      ],
+      "notas": [
+        "Skill do Kit de Edição com Claude (Drive do Notion), instalada em ~/.claude/skills/edit-reels; cópia em ~/Documents/Projetos/07_apoio/referencias-edicao-video/drive-skill/.",
+        "Pré-requisito uma vez: npx hyperframes models install parakeet (transcrição local)."
+      ]
+    },
+    {
+      "midia": "video",
+      "familia": "Edição e motion graphics",
+      "status": "atual",
+      "motor": "Claude Code + HyperFrames (out/2026)",
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Edição de Vídeo.md",
+      "id": "EDIT-04",
+      "titulo": "Vídeo tutorial de uso de app/produto (screen + motion)",
+      "tipo": "template",
+      "tag": "edicao",
+      "uso": "Vídeo mostrando onde clicar em cada tela de um app/entregável, com narração na voz do expert e o visual da página de vendas. Usado no tutorial do Cardápio das Estrelas (23/10).",
+      "blocos": [
+        "Usando /hyperframes, crie um vídeo tutorial de [DURAÇÃO] mostrando como usar [PRODUTO / ENTREGÁVEIS].\n- Telas reais: [URLs ou localhost] — grave cada tela em alta resolução e mostre o cursor/toque onde a pessoa clica; nunca invente interface.\n- Ordem: [LISTA DE TELAS NA ORDEM DE USO]\n- Visual: motion graphics minimalista no estilo de [PÁGINA DE VENDAS / IDENTIDADE] (cores, fontes, logo).\n- Narração: voz de [EXPERT], gerada no VoiceStudio (127.0.0.1:3900) a partir do roteiro; um bloco de fala por tela.\n- Formato: [16:9 / 9:16]. Legendas em grupos de 2–3 palavras.\n- Final: [CHAMADA / ONDE ENCONTRAR O MATERIAL].\nMostre o roteiro em tabela (tempo · fala · tela · onde clica) antes de renderizar."
+      ],
+      "notas": [
+        "Molde escrito a partir do pedido do Matheus de 23/10/2026 (vídeo de uso do Cardápio das Estrelas)."
+      ]
+    },
+    {
+      "id": "PERS-01",
+      "titulo": "Criar personagem do zero — pixel style",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Criar uma imagem-base original antes das pranchas. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma imagem-base de uma personagem original.\n\nReferência de estilo: anexe pixel-style-padrao.png. “Pixel style” é o nome usado por Matheus para o acabamento 3D desta imagem: volumes arredondados, olhos expressivos, cabelo volumétrico e superfícies suaves. Não interpretar como pixel art ou voxel. A imagem define o acabamento; rosto, roupa, pose, cenário e cores seguem o briefing. Só copie a pose se solicitado. Uma referência de estilo explicitamente fornecida para o pedido tem prioridade sobre esse padrão.\n\nPERSONAGEM\nNome: [nome]. Idade aparente: [idade]. Pele: [tom]. Rosto e olhos: [descrição]. Cabelo: [cor, textura e penteado]. Corpo: [proporções]. Personalidade visual: [descrição]. Profissão: [profissão]. Roupa e acessórios: [descrição].\n\nCENA\nAmbiente: [local]. Pose e ação: [descrição]. Enquadramento: [descrição]. Proporção: [proporção].\n\nGere uma única personagem em uma única imagem de apresentação. Não faça colagem ou contact sheet. A identidade será escolhida antes das próximas etapas."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "PERS-02",
+      "titulo": "Recriar a mesma personagem em outro estilo",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Converter o acabamento preservando a identidade. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Recrie a personagem da imagem 1 no acabamento visual da imagem 2.\n\nImagem 1 = identidade. Imagem 2 = estilo. Na ausência de outro estilo fornecido, use a referência pixel-style-padrao.png anexada.\n\nReferência de estilo: anexe pixel-style-padrao.png. “Pixel style” é o nome usado por Matheus para o acabamento 3D desta imagem: volumes arredondados, olhos expressivos, cabelo volumétrico e superfícies suaves. Não interpretar como pixel art ou voxel. A imagem define o acabamento; rosto, roupa, pose, cenário e cores seguem o briefing. Só copie a pose se solicitado. Uma referência de estilo explicitamente fornecida para o pedido tem prioridade sobre esse padrão.\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nTraduza os traços para o novo estilo sem copiar o rosto da imagem 2.\nAlterações autorizadas: [lista]. Ambiente: [local]. Pose: [descrição]. Enquadramento: [descrição]. Proporção: [proporção].\nGere uma única imagem-base para avaliação, sem prancha."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "PERS-03",
+      "titulo": "Criar nova personagem a partir de referência",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Reutilizar a linguagem visual com uma nova identidade. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma nova personagem usando a imagem anexada como referência de linguagem visual.\n\nReferência de estilo: anexe pixel-style-padrao.png. “Pixel style” é o nome usado por Matheus para o acabamento 3D desta imagem: volumes arredondados, olhos expressivos, cabelo volumétrico e superfícies suaves. Não interpretar como pixel art ou voxel. A imagem define o acabamento; rosto, roupa, pose, cenário e cores seguem o briefing. Só copie a pose se solicitado. Uma referência de estilo explicitamente fornecida para o pedido tem prioridade sobre esse padrão.\n\nMantenha o grau de estilização, linguagem de formas, tratamento dos olhos, materiais e acabamento. Crie a identidade abaixo.\nNome: [nome]. Idade: [idade]. Pele: [tom]. Rosto e olhos: [descrição]. Cabelo: [descrição]. Corpo: [descrição]. Roupa: [descrição]. Personalidade: [descrição].\nAmbiente: [local]. Pose: [descrição]. Proporção: [proporção].\nNão deduza características físicas somente da nacionalidade; use os atributos descritos. Gere uma personagem por imagem, sem contact sheet. Se houver várias personagens, desenvolva cada imagem-base separadamente."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "PERS-04",
+      "titulo": "Contact sheet de corpo — quatro vistas",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Registrar a personagem escolhida de frente, lados e costas. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma character turnaround sheet da personagem anexada. A imagem-base escolhida define a identidade e o acabamento.\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nUma prancha horizontal 16:9, fundo cinza-claro uniforme, com quatro vistas: frente, perfil esquerdo, costas e perfil direito. Corpo inteiro em todas, incluindo cabelo, mãos e pés. Mesma escala, linha de chão e iluminação suave. Pose neutra, braços ligeiramente afastados do tronco. Espaço entre as vistas.\n\nComplete detalhes ocultos de forma simples e coerente. Uma única personagem por prancha. Não misture duas personagens, não varie figurino nem adicione cenário, expressões extras, títulos ou textos."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "PERS-05",
+      "titulo": "Contact sheet de rosto e expressões",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Registrar ângulos e expressões sem perder o rosto. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma prancha de referência facial da personagem anexada.\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nPrancha horizontal 16:9, duas linhas com quatro quadros cada. Linha superior: frente neutra, três quartos à esquerda, perfil e três quartos à direita. Linha inferior, vista frontal: sorriso natural, alegria com sorriso aberto, surpresa e concentração. Cabeça e parte dos ombros, escala semelhante, fundo cinza-claro uniforme, luz suave.\n\nModifique somente a expressão nos quadros correspondentes; não mude idade, cabelo, roupa ou acessórios. Uma personagem por prancha. Sem texto.\nSe o pedido for detalhes faciais em vez de expressões, substitua apenas a linha inferior por quatro ampliações: olhos e sobrancelhas; nariz; boca; cabelo e linha do cabelo."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "PERS-06",
+      "titulo": "Cena ou selfie com uma ou duas personagens",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Usar identidades escolhidas em uma nova cena. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma única cena com as personagens anexadas.\nImagem 1 = [personagem A]. Imagem 2 = [personagem B, se houver]. Outras imagens = [papel de cada referência].\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nLocal: [local]. Ação: [ação]. Expressões: [descrição]. Roupa: [manter ou mudança autorizada]. Objetos: [objetos]. Composição: [uma personagem / duas juntas na mesma imagem]. Proporção: [proporção]. Uso final: [uso].\n\nSe for selfie: perspectiva da câmera frontal de celular segurado por [personagem], braço e olhar coerentes, celular fora do campo. Com duas personagens, mantenha ambos os rostos inteiros, distintos e próximos.\n\nPara perfil: 1:1 com rostos dentro da região central do futuro recorte circular e margem ao redor. Para Stories: 9:16 vertical. Para horizontal: 16:9. Escolha a opção do briefing; não misture formatos. Sem colagem, divisão em quadros ou texto."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "PERS-07",
+      "titulo": "Expandir imagem sem aumentar rostos",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Acrescentar cenário mantendo escala, pose e perspectiva. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Expanda a imagem anexada para [16:9 horizontal / 9:16 vertical / proporção desejada].\n\nAcrescente área [nas laterais / acima e abaixo / em todas as direções], continuando o cenário com a mesma perspectiva, luz, materiais e acabamento.\n\nPreserve rostos, expressões, poses, roupas, objetos e ângulo da imagem original. Não aumente as personagens nem aproxime a câmera. Não recorte o conteúdo existente.\n\nSe necessário, reduza o conjunto original proporcionalmente para acomodá-lo ao novo quadro, sem deformar ou reposicionar personagens individualmente. O resultado deve mostrar mais espaço ao redor. Uma única imagem expandida, sem molduras, faixas vazias ou elementos repetidos."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "PERS-08",
+      "titulo": "Editar somente um detalhe da imagem",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "pronto-para-uso-nao-testado",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Corrigir um elemento preservando a composição. Referência pixel style: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Referência padrão: http://127.0.0.1:4317/referencias/pixel-style-padrao.png",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Edite a imagem anexada fazendo somente a alteração abaixo.\n\nAlteração: [o que muda]. Área ou personagem: [onde muda].\n\nPreserve todo o restante: identidade, idade, pele, olhos, cabelo, expressão, pose, roupa, cenário, enquadramento, iluminação e acabamento, exceto o que estiver explicitamente incluído na alteração.\n\nNão redesenhe nem acrescente elementos por iniciativa própria. Entregue a imagem completa com a correção aplicada."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Personagens e Contact Sheets.md"
+    },
+    {
+      "id": "FOTO-09",
+      "titulo": "Foto de receita para e-book (comida caseira com prato de referência)",
+      "midia": "foto",
+      "familia": "Cena descritiva",
+      "tag": "receita comida food e-book entregavel",
+      "tipo": "template",
+      "status": "testado",
+      "motor": "Google Flow — Nano Banana 2.1, 4:3, x1, 0 créditos (26/10/2026)",
+      "uso": "Uma foto por receita de e-book/entregável, todas no mesmo estilo. Anexar 1 foto de prato do mesmo tipo (ex.: muffin → muffin) só como referência de realismo; a descrição manda no conteúdo.",
+      "notas": [
+        "Usado em 26/10/2026 nas 100 receitas do Guia da Lancheira Saudável (Giovana Castro e Cozinheiras da Vovó). Piloto aprovado visualmente.",
+        "Só o miolo muda por receita; o bloco de estilo fica fixo para o livro inteiro ter a mesma luz e mesa.",
+        "Gerador: GuiaLancheiraSaudavel/scripts/fotos_prompts.py + flow_fotos.py (clique de mouse real no Start generation)."
+      ],
+      "blocos": [
+        "Food photograph, 4:3 landscape. [O QUE A CÂMERA VÊ: forma, cor, textura, quantidade plausível, interior aparecendo quando ajuda — fiel aos ingredientes da receita] Served [como está servido: tábua, prato branco, assadeira, forminhas, lancheira infantil aberta]. Around it: [1 a 3 ingredientes crus da própria receita]. Bright natural daylight from a large window on the left, soft gentle shadows. Light natural wood tabletop with a white linen napkin. Camera at a 45-degree angle, 50mm lens look, shallow depth of field, the food in crisp focus. Realistic homemade food photography with true-to-life colors, fresh and appetizing, clean uncluttered composition with the food centered and breathing room around it. Use the attached photo only as a reference for the homemade, real-recipe look and natural food-photography realism. Create a completely new photo of the dish described here; do not copy the attached food, props, plate or composition. No people, no hands, no text, no letters, no logos, no labels, no watermark."
+      ],
+      "arquivo": "05_Biblioteca/03_recursos/Prompts-Geracao/Prompts de Foto.md"
+    }
+  ]
+}

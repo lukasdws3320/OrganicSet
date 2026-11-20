@@ -1,0 +1,140 @@
+{
+  "objetivos": [
+    {
+      "id": "kit-realista",
+      "titulo": "Kit do avatar — realista",
+      "descricao": "Close-up → face sheet → body sheet; você monta o contact sheet; depois selfie, frontal e cenário."
+    },
+    {
+      "id": "kit-3d",
+      "titulo": "Kit do avatar — 3D",
+      "descricao": "Mesma sequência no estilo 3D de animação. Anexe a referência de estilo pixel na primeira imagem."
+    },
+    {
+      "id": "pixel",
+      "titulo": "Personagem pixel style",
+      "descricao": "Criar personagem do zero ou converter alguém para o estilo pixel, pranchas e cenas."
+    },
+    {
+      "id": "swap",
+      "titulo": "Colocar o avatar numa foto",
+      "descricao": "Recriar uma foto de referência com o seu avatar no lugar da pessoa."
+    }
+  ],
+  "atribuicao": {
+    "KIT-R-01": "kit-realista",
+    "KIT-R-02": "kit-realista",
+    "KIT-R-03": "kit-realista",
+    "KIT-R-04": "kit-realista",
+    "KIT-R-05": "kit-realista",
+    "KIT-R-06": "kit-realista",
+    "KIT-3D-01": "kit-3d",
+    "KIT-3D-02": "kit-3d",
+    "KIT-3D-03": "kit-3d",
+    "KIT-3D-04": "kit-3d",
+    "KIT-3D-05": "kit-3d",
+    "KIT-3D-06": "kit-3d",
+    "KIT-MONTAGEM": "kit-realista",
+    "PERS-01": "pixel",
+    "PERS-02": "pixel",
+    "PERS-03": "pixel",
+    "PERS-04": "pixel",
+    "PERS-05": "pixel",
+    "PERS-06": "pixel",
+    "PERS-07": "pixel",
+    "PERS-08": "pixel",
+    "FOTO-08": "swap",
+    "FOTO-07": "swap"
+  },
+  "exemplos": {
+    "PERS-01": {
+      "necessidade": "Criar uma nutricionista-chef original, adulta, loira e acolhedora.",
+      "entradas": [
+        "Referência padrão de estilo: prompts/referencias/pixel-style-padrao.png",
+        "Imagem-base da personagem quando já existir."
+      ],
+      "trecho": "Crie uma nutricionista-chef de 35 anos, pele clara, olhos castanhos e cabelo loiro ondulado até os ombros. Jaleco de chef branco com detalhes verdes. Em pé na cozinha, segurando uma tigela, enquadramento da cintura para cima, 4:5. Use a imagem anexada apenas para o acabamento pixel style; não copie a mulher nem a pose da referência.",
+      "resultado": "Criar uma imagem-base original antes das pranchas."
+    },
+    "PERS-02": {
+      "necessidade": "Transformar uma personagem existente no acabamento da referência padrão.",
+      "entradas": [
+        "Referência padrão de estilo: prompts/referencias/pixel-style-padrao.png",
+        "Imagem-base da personagem quando já existir."
+      ],
+      "trecho": "Imagem 1: minha personagem. Imagem 2: referência padrão pixel style. Mantenha o rosto, cabelo e pele da imagem 1. Mude o acabamento para o da imagem 2. Mostre-a em pé na cozinha, sem copiar a pose sentada da referência. Proporção 4:5.",
+      "resultado": "Converter o acabamento preservando a identidade."
+    },
+    "PERS-03": {
+      "necessidade": "Criar uma loira e uma morena com identidades próprias no mesmo estilo.",
+      "entradas": [
+        "Referência padrão de estilo: prompts/referencias/pixel-style-padrao.png",
+        "Imagem-base da personagem quando já existir."
+      ],
+      "trecho": "Crie primeiro a personagem A: mulher adulta, cabelo loiro ondulado, olhos castanhos, avental amarelo. Use o acabamento pixel style da imagem anexada. Mostre-a em pé na cozinha, 4:5. A personagem B será desenvolvida em outro pedido, com cabelo castanho cacheado e avental verde.",
+      "resultado": "Reutilizar a linguagem visual com uma nova identidade."
+    },
+    "PERS-04": {
+      "necessidade": "Fazer uma prancha independente para cada uma das duas chefs.",
+      "entradas": [
+        "Imagem-base escolhida e, se necessário, pranchas de rosto/corpo."
+      ],
+      "trecho": "Use somente a imagem-base da chef loira anexada. Crie frente, perfil esquerdo, costas e perfil direito, corpo inteiro, no mesmo figurino, fundo cinza-claro, 16:9. Não inclua a chef morena.",
+      "resultado": "Registrar a personagem escolhida de frente, lados e costas."
+    },
+    "PERS-05": {
+      "necessidade": "Criar referências de rosto para reutilizar a mesma chef em outras cenas.",
+      "entradas": [
+        "Imagem-base escolhida e, se necessário, pranchas de rosto/corpo."
+      ],
+      "trecho": "Use o rosto da chef escolhida. Faça a prancha com quatro ângulos neutros e quatro expressões: sorriso, alegria, surpresa e concentração. Fundo cinza-claro. Mantenha o mesmo rosto e cabelo.",
+      "resultado": "Registrar ângulos e expressões sem perder o rosto."
+    },
+    "PERS-06": {
+      "necessidade": "Selfie das duas chefs juntas para perfil.",
+      "entradas": [
+        "Imagem-base escolhida e, se necessário, pranchas de rosto/corpo."
+      ],
+      "trecho": "Imagem 1: chef loira. Imagem 2: chef morena. As duas juntas em uma selfie na cozinha, uma segurando um fouet e a outra uma colher de pau. A loira segura a câmera fora de quadro. 1:1, ambos os rostos dentro da área central do recorte circular, com margem acima do cabelo.",
+      "resultado": "Usar identidades escolhidas em uma nova cena."
+    },
+    "PERS-07": {
+      "necessidade": "Abrir o enquadramento da selfie das duas chefs.",
+      "entradas": [
+        "Imagem-base escolhida e, se necessário, pranchas de rosto/corpo."
+      ],
+      "trecho": "Expanda esta selfie para 16:9 horizontal, acrescentando cozinha nas laterais. Mantenha as duas personagens, os rostos, a pose, os utensílios e o ângulo. Não dê zoom nos rostos; quero mais espaço ao redor.",
+      "resultado": "Acrescentar cenário mantendo escala, pose e perspectiva."
+    },
+    "PERS-08": {
+      "necessidade": "Trocar a cor de um avental sem refazer as personagens.",
+      "entradas": [
+        "Imagem-base escolhida e, se necessário, pranchas de rosto/corpo."
+      ],
+      "trecho": "Mude somente o avental da chef loira de amarelo para azul-marinho. Preserve a chef morena, ambos os rostos, cabelos, poses, utensílios, cozinha, enquadramento e luz.",
+      "resultado": "Corrigir um elemento preservando a composição."
+    },
+    "FOTO-08": {
+      "necessidade": "Mesma coisa do FOTO-07, mas só tenho **uma** foto boa do avatar e quero velocidade.",
+      "entradas": [
+        "@Image 1 = foto-alvo (cena)",
+        "@Image 2 = avatar (1 foto nítida)"
+      ],
+      "trecho": "recreate this image @Image 1 with same background, same lighting, improve quality, but change the woman by the woman in the photo @Image 2",
+      "resultado": "Cena preservada, avatar no lugar. Mais rápido e menos fiel que o FOTO-07.",
+      "atencao": "Não trava figurino — se precisar da roupa do avatar, use o FOTO-07."
+    },
+    "FOTO-07": {
+      "necessidade": "A referência é boa demais pra jogar fora: quero o meu avatar **dentro** dela, com a mesma luz, grading, pose e objetos — sem parecer colagem.",
+      "entradas": [
+        "@Image 1 = foto-alvo (a cena que você quer reproduzir)",
+        "@Image 2, 3, 5 = avatar em ângulos diferentes",
+        "@Image 4 = roupa (peça avulsa ou foto do look)",
+        "Opcional: `must be without glasses` se óculos atrapalharem a identidade"
+      ],
+      "trecho": "recreate this image @Image 1 with same background, same lighting, improve quality, but change the woman of the photo @Image 1 by the woman in the photos @Image 2 @Image 3 @Image 4 @Image 5 (it's the same woman, but in different angles, her face is in @Image 5, must be without glasses, and with the clothes of @Image 4)",
+      "resultado": "A cena original com o rosto/corpo do avatar integrado: filtros, ângulo, pose e objetos preservados. É o swap de qualidade quando a foto é boa.",
+      "atencao": "O rosto tem que estar na referência mais nítida (aqui `@Image 5`). Se você trocar a ordem das imagens, troque o número no texto também — senão ele pega o ângulo errado."
+    }
+  }
+}

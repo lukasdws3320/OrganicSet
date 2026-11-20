@@ -1,0 +1,55 @@
+/* tokens.css — Brand Atlas 1.4 remodelado. NÃO usar verde.
+   Fonte única dos painéis (dashboard do cliente, painel privado) e do Reference Hub
+   (cópia byte a byte em InstagramReferenceHub/web/src/design/tokens.css). SPEC §2. */
+:root {
+  /* superfícies */
+  --paper:#F5F3EE; --card:#FFFFFF; --sunken:#ECE9E2; --media-bg:#E3DFD6;
+  /* tinta */
+  --ink:#141414; --on-ink:#F5F3EE; --ink-2:#47443F; --ink-3:#6B665E;
+  --line:#DEDAD1; --line-2:#C7C1B4;
+  /* acento (ação / foco / "depende de você") */
+  --brasa:#EE794E; --on-brasa:#141414; --brasa-ink:#A3431C; --brasa-wash:#FBE7DD;
+  /* semânticos */
+  --late:#B3261E; --late-wash:#F9E3E0;          /* atrasado / erro */
+  --wait:#2E4A7A; --wait-wash:#E4EAF4;          /* agendado / esperando outra pessoa */
+  --warn:#8A5A00; --warn-wash:#FBF0D9;          /* divergência / dado velho (âmbar) */
+  /* lateral dos painéis, barra de lote */
+  --night:#141414; --on-night:#F5F3EE; --night-2:#2A2927; --night-3:#A39E94;
+  --focus:#EE794E;
+  /* tipografia */
+  --f-sans:"DM Sans",system-ui,sans-serif; --f-serif:"DM Serif Display",Georgia,serif; --f-mono:"DM Mono",ui-monospace,monospace;
+  --fs-10:10px; --fs-11:11px; --fs-12:12px; --fs-13:13px; --fs-14:14px; --fs-16:16px;
+  --fs-20:20px; --fs-26:26px; --fs-36:36px; --fs-44:44px;
+  /* espaço (grade de 4) */
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:20px; --s-6:24px; --s-8:32px; --s-12:48px;
+  /* raio */
+  --r-1:4px; --r-2:6px; --r-3:10px; --r-4:14px;
+  /* sombra: só no que flutua */
+  --sh-1:0 0 0 1px var(--line), 0 1px 2px rgba(20,18,15,.06);
+  --sh-2:0 1px 0 rgba(0,0,0,.04), 0 12px 32px -8px rgba(20,18,15,.22);
+  /* movimento */
+  --t-fast:120ms; --t-med:220ms; --ease:cubic-bezier(.2,.7,.2,1);
+  /* alvo */
+  --hit:36px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper:#111110; --card:#1A1A18; --sunken:#222220; --media-bg:#262522;
+  --ink:#F2EFE9; --on-ink:#141414; --ink-2:#CBC6BC; --ink-3:#9C968B;
+  --line:#2E2D2A; --line-2:#3E3C38;
+  --brasa-ink:#F39B79; --brasa-wash:#3A2219;
+  --late:#F28B82; --late-wash:#3A1D1A; --wait:#9DB4E0; --wait-wash:#1C2433; --warn:#E0A447; --warn-wash:#33270F;
+  --night:#000000; --on-night:#F2EFE9; --night-2:#1E1E1C;
+  --focus:#F39B79; --sh-2:0 0 0 1px var(--line-2); color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --paper:#111110; --card:#1A1A18; --sunken:#222220; --media-bg:#262522;
+  --ink:#F2EFE9; --on-ink:#141414; --ink-2:#CBC6BC; --ink-3:#9C968B;
+  --line:#2E2D2A; --line-2:#3E3C38;
+  --brasa-ink:#F39B79; --brasa-wash:#3A2219;
+  --late:#F28B82; --late-wash:#3A1D1A; --wait:#9DB4E0; --wait-wash:#1C2433; --warn:#E0A447; --warn-wash:#33270F;
+  --night:#000000; --on-night:#F2EFE9; --night-2:#1E1E1C;
+  --focus:#F39B79; --sh-2:0 0 0 1px var(--line-2); color-scheme: dark;
+}
+@media (pointer:coarse) { :root { --hit:44px; } }
+@media (prefers-reduced-motion: reduce) { :root { --t-fast:0ms; --t-med:0ms; } }

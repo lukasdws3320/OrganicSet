@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%%TITULO%%</title>
+<style>
+:root{--bg:#f3f5f8;--surface:#fff;--fg:#15233b;--muted:#5b6880;--line:#d9dfe8;--accent:#1f4fa0;--lime:#4f8a14;
+ --ok-bg:#e3f2d6;--ok-fg:#2f5e0c;--warn-bg:#fdf0cf;--warn-fg:#7a5300;--bad-bg:#fde2df;--bad-fg:#9b2418;--none-bg:#e6e9ef;--none-fg:#465268;--soft:#eef2f8;
+ --f:"Segoe UI",system-ui,sans-serif;--m:Consolas,"Cascadia Mono",monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1522;--surface:#152033;--fg:#e4eaf4;--muted:#9aa7bd;--line:#26344d;--accent:#86aefc;--lime:#9fd364;
+ --ok-bg:#1f3a12;--ok-fg:#b7e58c;--warn-bg:#3d2f0a;--warn-fg:#f3cf75;--bad-bg:#45161b;--bad-fg:#ffaea5;--none-bg:#232f44;--none-fg:#b8c3d6;--soft:#1a2840;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--f);padding:28px 16px 60px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;gap:22px}h1,h2,h3{margin:0}h1{font-size:30px}
+.sub,.meta{color:var(--muted);margin:4px 0 0}.aviso{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:0}
+.lista{display:grid;gap:16px}.corte{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:12px}
+.cab{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}.cab h2{font-size:19px}.tc{margin-left:auto;font:13px var(--m);color:var(--muted)}
+.chip{font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px}.ok{background:var(--ok-bg);color:var(--ok-fg)}.ressalva{background:var(--warn-bg);color:var(--warn-fg)}
+.refazer{background:var(--bad-bg);color:var(--bad-fg)}.falta{background:var(--none-bg);color:var(--none-fg)}.agerar{background:var(--soft);color:var(--accent)}
+.corpo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:20px;align-items:start}
+.quadros{display:grid;grid-template-columns:1fr 1fr;gap:10px}figure{margin:0;display:grid;gap:5px}
+figure img,.vazio{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;background:var(--soft);display:grid;place-items:center;color:var(--muted);font-size:13px}
+figcaption{font-size:12px;color:var(--muted)}.texto{min-width:0;display:grid;gap:8px;align-content:start}
+.texto h3{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.fala{margin:0}.nota{margin:0;padding:9px 12px;border-radius:6px;background:var(--warn-bg);color:var(--warn-fg)}
+.abas{display:flex;flex-wrap:wrap;gap:4px}.aba{font:600 13px var(--f);border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:6px 6px 0 0;padding:6px 12px;cursor:pointer}
+.aba[aria-selected="true"]{background:var(--accent);color:var(--surface);border-color:var(--accent)}.painel{display:grid;gap:8px}
+.config{margin:0;font-size:13px;color:var(--lime);font-weight:600}
+.prompt{margin:0;font:12.5px/1.6 var(--m);background:var(--soft);border-radius:6px;padding:12px;max-height:16em;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.copiar{justify-self:start;font:500 13px var(--f);border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:6px;padding:6px 12px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:820px){.corpo{grid-template-columns:1fr}.tc{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header><h1>%%TITULO%%</h1><p class="sub">%%SUB%%</p><p class="meta">%%META%%</p></header>
+ %%TOPO%%
+ <main class="lista">
+%%CARDS%%
+ </main>
+</div>
+<script>
+document.querySelectorAll('.abas').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('.aba');if(!b)return;
+ g.querySelectorAll('.aba').forEach(x=>{x.setAttribute('aria-selected',String(x===b));document.getElementById(x.dataset.painel).hidden=x!==b;});}));
+document.querySelectorAll('.copiar').forEach(b=>b.addEventListener('click',()=>{const el=document.getElementById(b.dataset.alvo),o=b.textContent;
+ const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionado: aperte Ctrl+C';};
+ try{navigator.clipboard.writeText(el.textContent).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent=o,1500)},sel);}catch(e){sel();}}));
+</script>
+</body>
+</html>

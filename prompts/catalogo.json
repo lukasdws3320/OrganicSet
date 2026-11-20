@@ -1,0 +1,450 @@
+{
+  "versao": 2,
+  "aviso": "",
+  "prompts": [
+    {
+      "id": "KIT-R-01",
+      "titulo": "Close-up do rosto (realista)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "1ª imagem do kit: o rosto a partir da referência recebida.",
+      "blocos": [
+        "give-me a close up of this woman/man focusing on her/his facial features, iphone camera shoot, sharp and realistic skin, not plastic"
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/closeup.png"
+      ]
+    },
+    {
+      "id": "KIT-R-02",
+      "titulo": "Face sheet — 6 ângulos do rosto (realista)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "2ª imagem: usa o close-up como referência.",
+      "blocos": [
+        "Create a character identity contact sheet using the attached image as the primary visual reference. Every panel must depict the same single character, preserving the reference's visual style, facial structure, apparent age, skin tone, eye color, hairline, hairstyle, and distinctive visible features.\n\nArrange six head-and-shoulders portraits in a clean 3-column by 2-row grid: Top row: straight-on front view, three-quarter view facing left, true left profile. Bottom row: three-quarter view facing right, true right profile, rear view of the head showing the hairstyle.\n\nKeep a neutral expression, relaxed mouth, and consistent head scale across all panels. Keep the same visible clothing and accessories. Use a plain light-gray studio background and soft, even lighting so the facial features remain clearly readable.\n\nTreat unseen angles as plausible reconstructions consistent with the attached reference. Preserve natural asymmetries. Avoid beautification, facial redesign, age changes, or hairstyle variations.\n\nDeliver one single contact sheet image with evenly spaced, clearly separated panels. No captions, labels, logos, or watermarks."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/facesheet.png"
+      ]
+    },
+    {
+      "id": "KIT-R-03",
+      "titulo": "Body sheet — corpo em 4 vistas (realista)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "3ª imagem: frente, perfil esquerdo, costas, perfil direito.",
+      "blocos": [
+        "Create a full-body character turnaround sheet using the attached image as the primary identity and visual-style reference. Show the same single character in all four panels. Use a clean horizontal layout with four evenly spaced full-body views, ordered from left to right: front view, true left profile, back view, true right profile.\n\nPreserve the reference's face, apparent age, skin tone, hairstyle, and all visible identity features. Preserve clothing and body proportions wherever they are visible in the source image.\n\nThe character stands upright in a relaxed neutral pose, arms slightly separated from the torso, hands relaxed, feet fully visible. Use consistent character height, a shared ground line, matching proportions, and the same camera elevation in every panel. Use a neutral camera perspective without wide-angle distortion.\n\nPlain light-gray studio background, soft even lighting, subtle contact shadows beneath the feet. Match the rendering style of the attached reference.\n\nDeliver one single turnaround sheet image. Keep generous margins above the head and below the feet. No cropped limbs, extra characters, props, captions, labels, logos, or watermarks.\n\n4k, UHD"
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/bodysheet.png"
+      ]
+    },
+    {
+      "id": "KIT-MONTAGEM",
+      "titulo": "Montagem do contact sheet (você faz)",
+      "midia": "foto",
+      "tipo": "passo",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Canva, Figma ou outro editor",
+      "uso": "Junte close-up, face sheet e body sheet numa folha só, recortando as cabeças do body sheet como no exemplo, e escreva o nome do avatar. Salve como contactsheet<Nome>.png e mande para o agente.",
+      "blocos": [],
+      "notas": [],
+      "referencias": [
+        "prompts/referencias/exemplos/contactsheet-montado.png"
+      ]
+    },
+    {
+      "id": "KIT-R-04",
+      "titulo": "React selfie com fundo (realista)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "Depois do contact sheet montado: imagem base dos vídeos de React.",
+      "blocos": [
+        "Use @CONTACTSHEET as the only reference image. Preserve the avatar’s exact identity, face, facial structure, skin tone, age, hairstyle, hair texture, body proportions, body size, and clothing.\n\nCreate a vertical 9:16 ultra-realistic handheld smartphone selfie. The avatar is indoors, holding the phone with one arm extended forward toward the camera. The arm should be visible entering from the lower-left edge of the frame and naturally cropped, giving a believable real selfie composition. The avatar looks straight into the lens. Camera is positioned near eye level, close to the face, with realistic front-camera smartphone wide-angle perspective. Frame the avatar from the waist or upper thighs up to above the head.\n\nPlace the avatar in a warm natural-health room that feels like a small herbal kitchen or apothecary corner inside an American suburban home. On the left side, include a tall white-framed window with bright sunlight entering, and outside show a calm suburban backyard with trees, lawn, and fencing. Behind and to the right of the avatar, include wooden shelves and a small wooden cabinet displaying multiple glass jars filled with dried herbs and roots, a few amber bottles, white ceramic pots with green plants, and a clearly visible small United States flag placed somewhere in the background. Keep the room warm and clean, with soft cream walls and light wooden flooring.\n\nThe avatar should occupy the central area of the composition while enough of the background remains visible to establish the environment. Daylight should come mainly from the left and naturally light the avatar’s face, hair, clothing, and skin. Authentic iPhone selfie aesthetic, realistic handheld feel, subtle front-camera lens distortion, realistic skin pores and wrinkles, natural facial texture, crisp but natural detail, photorealistic, not stylized, not cinematic.\n\nIMPORTANT: this must remain a real selfie. Keep the extended arm and handheld perspective. Do not create a formal portrait, tripod shot, or third-person camera angle.\n\nNo text, no captions, no subtitles, no watermark, no logos, no extra people."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/reactselfie.png"
+      ]
+    },
+    {
+      "id": "KIT-R-05",
+      "titulo": "Frontal neutra (realista)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "Depois do contact sheet: personagem centralizado, fundo neutro.",
+      "blocos": [
+        "Use @CONTACTSHEET as the only reference image. Preserve the avatar’s exact identity, face, facial structure, skin tone, age appearance, hairstyle, hair texture, body proportions, body size, clothing, and accessories.\n\nCreate a vertical 9:16 ultra-realistic smartphone portrait of the avatar standing against a plain, warm off-white wall, facing directly toward the camera. The avatar has a natural, relaxed standing posture, shoulders straight, arms resting comfortably at the sides, and a gentle, friendly smile with direct eye contact. Position the camera directly in front of the avatar at eye level, approximately 2–3 meters away. Use a perfectly straight-on, symmetrical composition with no head tilt or body rotation.\n\nFrame the avatar in a nearly full-body portrait, from just below the knees to well above the head, centered horizontally. Keep the entire head, shoulders, arms, hands, torso, hips, and most of the legs visible, with approximately 10% empty space above the head. Maintain natural body proportions without cropping the hands or distorting the legs. Use soft, evenly distributed natural daylight, subtle realistic shadows, and a clean, neutral background.\n\nUltra-realistic, authentic iPhone camera look, sharp focus, natural skin texture, realistic fabric details, natural exposure, not stylized, not cartoon, not CGI.\n\nNo changes to the avatar’s identity or clothing, no added accessories or props, no furniture, no extra people, no text, no watermark, no logos."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/frontal.png"
+      ]
+    },
+    {
+      "id": "KIT-R-06",
+      "titulo": "Frontal em cenário (realista)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "Depois do contact sheet: personagem centralizado no cenário do expert.",
+      "blocos": [
+        "Use @CONTACTSHEET as the only reference image. Preserve the avatar’s exact identity, face, facial structure, skin tone, age appearance, hairstyle, hair texture, body proportions, body size, and clothing.\n\nCreate a vertical 9:16 ultra-realistic smartphone photo of the avatar standing behind a rustic wooden kitchen island in a bright, cozy home kitchen. The avatar is not holding anything. No book in the hands and no book anywhere in the scene. The avatar should have a natural instructional posture, with the hands resting naturally on the table or making a subtle explaining gesture, and the expression should feel calm and confident.\n\nThe setting is a warm kitchen interior with white paneled cabinets in the background, wooden cutting boards resting near the back counter, a coffee maker on the left side, and wooden floating shelves on the right containing glass jars filled with herbs, roots, dried ingredients, and a few brown apothecary bottles. On the far right, include a tall wood-trimmed window with soft daylight entering. Also include a small United States flag clearly visible somewhere in the environment, such as on the shelf or countertop.\n\nOn the wooden island in the foreground, include a few simple ingredients arranged naturally: one brown egg, a small bowl with white liquid, a small bowl with pale green liquid or gel, a small bowl with white powder, and a metal mixing bowl partially visible on the left edge.\n\nFrame the avatar approximately from mid-thigh or waist up to above the head, centered slightly to the right, with the kitchen environment clearly visible around them. Bright soft daylight should illuminate the scene naturally, with realistic shadows and highlights on the avatar, clothing, skin, and kitchen surfaces.\n\nUltra-realistic, authentic iPhone camera look, sharp focus, photorealistic skin texture, realistic fabric texture, natural exposure, realistic indoor daylight, not stylized, not cartoon.\n\nNo book, no subtitles, no captions, no on-screen text, no watermark, no logos, no extra people."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/frontalcenario.png"
+      ]
+    },
+    {
+      "id": "KIT-3D-01",
+      "titulo": "Close-up do rosto (3D)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "1ª imagem do kit: o rosto a partir da referência recebida.",
+      "blocos": [
+        "Create a close-up of the single character in the attached identity reference, focusing on the face. Render the character in the smooth, expressive 3D animated-film style of the attached style reference. Preserve the identity reference’s facial structure, apparent age, skin tone, eye color, hairline, hairstyle, visible clothing, and distinctive features while translating them into this 3D style. Keep the character centered, with the entire head visible, a relaxed neutral expression, a plain light-gray background, and soft even lighting. Use smooth dimensional forms and stylized materials consistent with the style reference. No photorealistic human skin, no live-action face, no pixel art, no voxel geometry, no captions, labels, logos, or watermarks."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png",
+        "prompts/referencias/exemplos/closeup.png"
+      ]
+    },
+    {
+      "id": "KIT-3D-02",
+      "titulo": "Face sheet — 6 ângulos do rosto (3D)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "2ª imagem: usa o close-up como referência.",
+      "blocos": [
+        "Create a character identity contact sheet using the attached image as the primary visual reference. Every panel must depict the same single character, preserving the reference's visual style, facial structure, apparent age, skin tone, eye color, hairline, hairstyle, and distinctive visible features.\n\nArrange six head-and-shoulders portraits in a clean 3-column by 2-row grid: Top row: straight-on front view, three-quarter view facing left, true left profile. Bottom row: three-quarter view facing right, true right profile, rear view of the head showing the hairstyle.\n\nKeep a neutral expression, relaxed mouth, and consistent head scale across all panels. Keep the same visible clothing and accessories. Use a plain light-gray studio background and soft, even lighting so the facial features remain clearly readable.\n\nTreat unseen angles as plausible reconstructions consistent with the attached reference. Preserve natural asymmetries. Avoid beautification, facial redesign, age changes, or hairstyle variations.\n\nDeliver one single contact sheet image with evenly spaced, clearly separated panels. No captions, labels, logos, or watermarks."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/facesheet.png"
+      ]
+    },
+    {
+      "id": "KIT-3D-03",
+      "titulo": "Body sheet — corpo em 4 vistas (3D)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "3ª imagem: frente, perfil esquerdo, costas, perfil direito.",
+      "blocos": [
+        "Create a full-body character turnaround sheet using the attached image as the primary identity and visual-style reference. Show the same single character in all four panels. Use a clean horizontal layout with four evenly spaced full-body views, ordered from left to right: front view, true left profile, back view, true right profile.\n\nPreserve the reference's face, apparent age, skin tone, hairstyle, and all visible identity features. Preserve clothing and body proportions wherever they are visible in the source image.\n\nThe character stands upright in a relaxed neutral pose, arms slightly separated from the torso, hands relaxed, feet fully visible. Use consistent character height, a shared ground line, matching proportions, and the same camera elevation in every panel. Use a neutral camera perspective without wide-angle distortion.\n\nPlain light-gray studio background, soft even lighting, subtle contact shadows beneath the feet. Match the rendering style of the attached reference.\n\nDeliver one single turnaround sheet image. Keep generous margins above the head and below the feet. No cropped limbs, extra characters, props, captions, labels, logos, or watermarks.\n\n4k, UHD"
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/bodysheet.png"
+      ]
+    },
+    {
+      "id": "KIT-3D-04",
+      "titulo": "React selfie com fundo (3D)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "Depois do contact sheet montado: imagem base dos vídeos de React.",
+      "blocos": [
+        "Use @CONTACTSHEET as the only reference image. Preserve the avatar’s exact identity, face, facial structure, skin tone, age, hairstyle, hair texture, body proportions, body size, and clothing.\n\nCreate a vertical 9:16 handheld smartphone selfie composition rendered in the same smooth 3D animated-film style as the reference. The avatar is indoors, holding the phone with one arm extended forward toward the camera. The arm should be visible entering from the lower-left edge of the frame and naturally cropped, giving a believable real selfie composition. The avatar looks straight into the lens. Camera is positioned near eye level, close to the face, with realistic front-camera smartphone wide-angle perspective. Frame the avatar from the waist or upper thighs up to above the head.\n\nPlace the avatar in a warm natural-health room that feels like a small herbal kitchen or apothecary corner inside an American suburban home. On the left side, include a tall white-framed window with bright sunlight entering, and outside show a calm suburban backyard with trees, lawn, and fencing. Behind and to the right of the avatar, include wooden shelves and a small wooden cabinet displaying multiple glass jars filled with dried herbs and roots, a few amber bottles, white ceramic pots with green plants, and a clearly visible small United States flag placed somewhere in the background. Keep the room warm and clean, with soft cream walls and light wooden flooring.\n\nThe avatar should occupy the central area of the composition while enough of the background remains visible to establish the environment. Daylight should come mainly from the left and naturally light the avatar’s face, hair, clothing, and skin. Authentic iPhone selfie aesthetic, realistic handheld feel, subtle front-camera lens distortion, stylized facial materials and age features matching the reference, crisp but natural detail, smooth 3D animated character rendering matching the reference, not a live-action human.\n\nIMPORTANT: this must retain a believable handheld selfie composition. Keep the extended arm and handheld perspective. Do not create a formal portrait, tripod shot, or third-person camera angle.\n\nNo text, no captions, no subtitles, no watermark, no logos, no extra people."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/reactselfie.png"
+      ]
+    },
+    {
+      "id": "KIT-3D-05",
+      "titulo": "Frontal neutra (3D)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "Depois do contact sheet: personagem centralizado, fundo neutro.",
+      "blocos": [
+        "Use @CONTACTSHEET as the only reference image. Preserve the avatar’s exact identity, face, facial structure, skin tone, age appearance, hairstyle, hair texture, body proportions, body size, clothing, and accessories.\n\nCreate a vertical 9:16 smartphone-style portrait rendered in the same smooth 3D animated-film style as the reference of the avatar standing against a plain, warm off-white wall, facing directly toward the camera. The avatar has a natural, relaxed standing posture, shoulders straight, arms resting comfortably at the sides, and a gentle, friendly smile with direct eye contact. Position the camera directly in front of the avatar at eye level, approximately 2–3 meters away. Use a perfectly straight-on, symmetrical composition with no head tilt or body rotation.\n\nFrame the avatar in a nearly full-body portrait, from just below the knees to well above the head, centered horizontally. Keep the entire head, shoulders, arms, hands, torso, hips, and most of the legs visible, with approximately 10% empty space above the head. Maintain natural body proportions without cropping the hands or distorting the legs. Use soft, evenly distributed natural daylight, subtle realistic shadows, and a clean, neutral background.\n\nSmooth 3D animated-film character rendering matching the reference, smartphone-style camera composition, sharp focus, stylized skin and fabric materials consistent with the reference, natural exposure. Keep the original 3D proportions; do not convert the character into a live-action human.\n\nNo changes to the avatar’s identity or clothing, no added accessories or props, no furniture, no extra people, no text, no watermark, no logos."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/frontal.png"
+      ]
+    },
+    {
+      "id": "KIT-3D-06",
+      "titulo": "Frontal em cenário (3D)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "familia": "Kit do avatar",
+      "status": "em uso",
+      "motor": "Nano Banana (Flow) ou ChatGPT",
+      "uso": "Depois do contact sheet: personagem centralizado no cenário do expert.",
+      "blocos": [
+        "Use @CONTACTSHEET as the only reference image. Preserve the avatar’s exact identity, face, facial structure, skin tone, age appearance, hairstyle, hair texture, body proportions, body size, and clothing.\n\nCreate a vertical 9:16 smartphone-style image rendered in the same smooth 3D animated-film style as the reference of the avatar standing behind a rustic wooden kitchen island in a bright, cozy home kitchen. The avatar is not holding anything. No book in the hands and no book anywhere in the scene. The avatar should have a natural instructional posture, with the hands resting naturally on the table or making a subtle explaining gesture, and the expression should feel calm and confident.\n\nThe setting is a warm kitchen interior with white paneled cabinets in the background, wooden cutting boards resting near the back counter, a coffee maker on the left side, and wooden floating shelves on the right containing glass jars filled with herbs, roots, dried ingredients, and a few brown apothecary bottles. On the far right, include a tall wood-trimmed window with soft daylight entering. Also include a small United States flag clearly visible somewhere in the environment, such as on the shelf or countertop.\n\nOn the wooden island in the foreground, include a few simple ingredients arranged naturally: one brown egg, a small bowl with white liquid, a small bowl with pale green liquid or gel, a small bowl with white powder, and a metal mixing bowl partially visible on the left edge.\n\nFrame the avatar approximately from mid-thigh or waist up to above the head, centered horizontally, with the kitchen environment clearly visible around them. Bright soft daylight should illuminate the scene naturally, with realistic shadows and highlights on the avatar, clothing, skin, and kitchen surfaces.\n\nSmooth 3D animated-film character rendering matching the reference, smartphone-style camera composition, sharp focus, stylized skin and fabric materials consistent with the reference, natural exposure and indoor daylight. Keep the original 3D proportions; do not convert the character into a live-action human.\n\nNo book, no subtitles, no captions, no on-screen text, no watermark, no logos, no extra people."
+      ],
+      "notas": [
+        "Exemplo de enquadramento abaixo: mostra outra pessoa, use só para ver o formato."
+      ],
+      "referencias": [
+        "prompts/referencias/exemplos/frontalcenario.png"
+      ]
+    },
+    {
+      "id": "PERS-01",
+      "titulo": "Criar personagem do zero — pixel style",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Criar uma imagem-base original antes das pranchas.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma imagem-base de uma personagem original.\n\nReferência de estilo: anexe pixel-style-padrao.png. “Pixel style” é o nome usado por Matheus para o acabamento 3D desta imagem: volumes arredondados, olhos expressivos, cabelo volumétrico e superfícies suaves. Não interpretar como pixel art ou voxel. A imagem define o acabamento; rosto, roupa, pose, cenário e cores seguem o briefing. Só copie a pose se solicitado. Uma referência de estilo explicitamente fornecida para o pedido tem prioridade sobre esse padrão.\n\nPERSONAGEM\nNome: [nome]. Idade aparente: [idade]. Pele: [tom]. Rosto e olhos: [descrição]. Cabelo: [cor, textura e penteado]. Corpo: [proporções]. Personalidade visual: [descrição]. Profissão: [profissão]. Roupa e acessórios: [descrição].\n\nCENA\nAmbiente: [local]. Pose e ação: [descrição]. Enquadramento: [descrição]. Proporção: [proporção].\n\nGere uma única personagem em uma única imagem de apresentação. Não faça colagem ou contact sheet. A identidade será escolhida antes das próximas etapas."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "PERS-02",
+      "titulo": "Recriar a mesma personagem em outro estilo",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Converter o acabamento preservando a identidade.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Recrie a personagem da imagem 1 no acabamento visual da imagem 2.\n\nImagem 1 = identidade. Imagem 2 = estilo. Na ausência de outro estilo fornecido, use a referência pixel-style-padrao.png anexada.\n\nReferência de estilo: anexe pixel-style-padrao.png. “Pixel style” é o nome usado por Matheus para o acabamento 3D desta imagem: volumes arredondados, olhos expressivos, cabelo volumétrico e superfícies suaves. Não interpretar como pixel art ou voxel. A imagem define o acabamento; rosto, roupa, pose, cenário e cores seguem o briefing. Só copie a pose se solicitado. Uma referência de estilo explicitamente fornecida para o pedido tem prioridade sobre esse padrão.\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nTraduza os traços para o novo estilo sem copiar o rosto da imagem 2.\nAlterações autorizadas: [lista]. Ambiente: [local]. Pose: [descrição]. Enquadramento: [descrição]. Proporção: [proporção].\nGere uma única imagem-base para avaliação, sem prancha."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "PERS-03",
+      "titulo": "Criar nova personagem a partir de referência",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Reutilizar a linguagem visual com uma nova identidade.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma nova personagem usando a imagem anexada como referência de linguagem visual.\n\nReferência de estilo: anexe pixel-style-padrao.png. “Pixel style” é o nome usado por Matheus para o acabamento 3D desta imagem: volumes arredondados, olhos expressivos, cabelo volumétrico e superfícies suaves. Não interpretar como pixel art ou voxel. A imagem define o acabamento; rosto, roupa, pose, cenário e cores seguem o briefing. Só copie a pose se solicitado. Uma referência de estilo explicitamente fornecida para o pedido tem prioridade sobre esse padrão.\n\nMantenha o grau de estilização, linguagem de formas, tratamento dos olhos, materiais e acabamento. Crie a identidade abaixo.\nNome: [nome]. Idade: [idade]. Pele: [tom]. Rosto e olhos: [descrição]. Cabelo: [descrição]. Corpo: [descrição]. Roupa: [descrição]. Personalidade: [descrição].\nAmbiente: [local]. Pose: [descrição]. Proporção: [proporção].\nNão deduza características físicas somente da nacionalidade; use os atributos descritos. Gere uma personagem por imagem, sem contact sheet. Se houver várias personagens, desenvolva cada imagem-base separadamente."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "PERS-04",
+      "titulo": "Contact sheet de corpo — quatro vistas",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Registrar a personagem escolhida de frente, lados e costas.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma character turnaround sheet da personagem anexada. A imagem-base escolhida define a identidade e o acabamento.\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nUma prancha horizontal 16:9, fundo cinza-claro uniforme, com quatro vistas: frente, perfil esquerdo, costas e perfil direito. Corpo inteiro em todas, incluindo cabelo, mãos e pés. Mesma escala, linha de chão e iluminação suave. Pose neutra, braços ligeiramente afastados do tronco. Espaço entre as vistas.\n\nComplete detalhes ocultos de forma simples e coerente. Uma única personagem por prancha. Não misture duas personagens, não varie figurino nem adicione cenário, expressões extras, títulos ou textos."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "PERS-05",
+      "titulo": "Contact sheet de rosto e expressões",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Registrar ângulos e expressões sem perder o rosto.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma prancha de referência facial da personagem anexada.\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nPrancha horizontal 16:9, duas linhas com quatro quadros cada. Linha superior: frente neutra, três quartos à esquerda, perfil e três quartos à direita. Linha inferior, vista frontal: sorriso natural, alegria com sorriso aberto, surpresa e concentração. Cabeça e parte dos ombros, escala semelhante, fundo cinza-claro uniforme, luz suave.\n\nModifique somente a expressão nos quadros correspondentes; não mude idade, cabelo, roupa ou acessórios. Uma personagem por prancha. Sem texto.\nSe o pedido for detalhes faciais em vez de expressões, substitua apenas a linha inferior por quatro ampliações: olhos e sobrancelhas; nariz; boca; cabelo e linha do cabelo."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "PERS-06",
+      "titulo": "Cena ou selfie com uma ou duas personagens",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Usar identidades escolhidas em uma nova cena.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Crie uma única cena com as personagens anexadas.\nImagem 1 = [personagem A]. Imagem 2 = [personagem B, se houver]. Outras imagens = [papel de cada referência].\n\nPreserve a identidade da imagem-base escolhida: rosto, idade aparente, tom de pele, olhos, nariz, boca, sobrancelhas, cabelo e proporções. Não misture identidades nem substitua o rosto por um rosto genérico. Preserve o estilo e o figurino, salvo alteração explicitamente solicitada.\n\nLocal: [local]. Ação: [ação]. Expressões: [descrição]. Roupa: [manter ou mudança autorizada]. Objetos: [objetos]. Composição: [uma personagem / duas juntas na mesma imagem]. Proporção: [proporção]. Uso final: [uso].\n\nSe for selfie: perspectiva da câmera frontal de celular segurado por [personagem], braço e olhar coerentes, celular fora do campo. Com duas personagens, mantenha ambos os rostos inteiros, distintos e próximos.\n\nPara perfil: 1:1 com rostos dentro da região central do futuro recorte circular e margem ao redor. Para Stories: 9:16 vertical. Para horizontal: 16:9. Escolha a opção do briefing; não misture formatos. Sem colagem, divisão em quadros ou texto."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "PERS-07",
+      "titulo": "Expandir imagem sem aumentar rostos",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Acrescentar cenário mantendo escala, pose e perspectiva.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Expanda a imagem anexada para [16:9 horizontal / 9:16 vertical / proporção desejada].\n\nAcrescente área [nas laterais / acima e abaixo / em todas as direções], continuando o cenário com a mesma perspectiva, luz, materiais e acabamento.\n\nPreserve rostos, expressões, poses, roupas, objetos e ângulo da imagem original. Não aumente as personagens nem aproxime a câmera. Não recorte o conteúdo existente.\n\nSe necessário, reduza o conjunto original proporcionalmente para acomodá-lo ao novo quadro, sem deformar ou reposicionar personagens individualmente. O resultado deve mostrar mais espaço ao redor. Uma única imagem expandida, sem molduras, faixas vazias ou elementos repetidos."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "PERS-08",
+      "titulo": "Editar somente um detalhe da imagem",
+      "midia": "foto",
+      "familia": "Personagem e referências 3D",
+      "tag": "pixel style contact sheet personagem",
+      "tipo": "template",
+      "status": "em uso",
+      "motor": "ChatGPT / Nano Banana Pro — texto sem sintaxe exclusiva",
+      "uso": "Corrigir um elemento preservando a composição.",
+      "notas": [
+        "Criado em 26/10/2026 a partir de dois chats fornecidos por Matheus. Modelos ainda não testados em novas gerações.",
+        "Imagem-base escolhida define a identidade; referência de estilo define acabamento; briefing define pose e cenário."
+      ],
+      "blocos": [
+        "Edite a imagem anexada fazendo somente a alteração abaixo.\n\nAlteração: [o que muda]. Área ou personagem: [onde muda].\n\nPreserve todo o restante: identidade, idade, pele, olhos, cabelo, expressão, pose, roupa, cenário, enquadramento, iluminação e acabamento, exceto o que estiver explicitamente incluído na alteração.\n\nNão redesenhe nem acrescente elementos por iniciativa própria. Entregue a imagem completa com a correção aplicada."
+      ],
+      "referencias": [
+        "prompts/referencias/pixel-style-padrao.png"
+      ]
+    },
+    {
+      "id": "FOTO-08",
+      "titulo": "Swap simples com integração total (1 foto de identidade)",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "swap rápido quando uma foto do avatar segura a identidade. Versão leve do FOTO-07, sem pack. @Image 1 = foto-alvo · @Image 2 = avatar. Não trava figurino — precisando da roupa do avatar, subir pro FOTO-07.",
+      "blocos": [
+        "recreate this image @Image 1 with same background, same lighting, improve quality, but change the woman by the woman in the photo @Image 2\n\nshe must be part of the image, like one, must apply the filters, the color grading, the angle, the pose of the photo @Image 1, will not recreate the woman of the photo @Image 1"
+      ],
+      "notas": [],
+      "familia": "Edição e swap",
+      "tag": "edicao",
+      "status": "em uso",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "referencias": []
+    },
+    {
+      "id": "FOTO-07",
+      "titulo": "Swap completo com pack de identidade",
+      "midia": "foto",
+      "tipo": "prompt",
+      "uso": "recriar a foto-alvo trocando a mulher da cena pelo avatar usando pack de identidade (3 ângulos + roupa em referência separada), integração total (grading, ângulo, pose, objetos) e proporções corporais do avatar. Anexar: @Image 1 = foto-alvo · @Image 2 @Image 3 @Image 5 = avatar em ângulos (rosto no 5) · @Image 4 = roupa.",
+      "blocos": [
+        "recreate this image @Image 1 with same background, same lighting, improve quality, but change the woman of the photo @Image 1 by the woman in the photos @Image 2 @Image 3 @Image 4 @Image 5 (it's the same woman, but in different angles, her face is in @Image 5, must be without glasses, and with the clothes of @Image 4)\n\nthe woman must be part of the image, like one, must apply the filters, the color grading, the angle, the pose, the objects, the context of the photo @Image 1; will not recreate the woman of the photo @Image 1. Must keep the body proportions of the woman of photos @Image 2 @Image 3 @Image 5"
+      ],
+      "notas": [],
+      "familia": "Edição e swap",
+      "tag": "edicao",
+      "status": "em uso",
+      "motor": "Flow / Omni (jul–ago 2026)",
+      "referencias": []
+    }
+  ]
+}

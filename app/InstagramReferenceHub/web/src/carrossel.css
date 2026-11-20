@@ -1,0 +1,19 @@
+/* Página do carrossel: original × replicado por slide, legenda e pacote. */
+.car-status { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:6px; }
+.car-fluxo { font-size:12px; color:var(--ink-3); }
+.car-skel { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; }
+.car-grid { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+.car-slide { position:relative; border:1px solid var(--line); border-radius:var(--r-2); background:var(--card); padding:10px; }
+.car-n { position:absolute; top:6px; left:10px; font-size:11px; color:var(--ink-3); }
+.car-par { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:14px 0 0; }
+.car-img { display:flex; flex-direction:column; gap:4px; min-width:0; }
+.car-img img, .car-falta { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--r-1); background:var(--sunken); }
+.car-img figcaption { font-size:11px; color:var(--ink-3); text-align:center; }
+.car-falta { display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--ink-3); border:1px dashed var(--line-2); }
+.car-leg { margin-top:24px; border:1px solid var(--line); border-radius:var(--r-2); background:var(--card); padding:14px 16px; max-width:720px; }
+.car-leg header { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px; }
+.car-leg h2 { font-size:14px; font-weight:600; }
+.car-leg pre { white-space:pre-wrap; font:inherit; font-size:13px; line-height:1.55; margin:0; }
+.car-pasta { margin-top:12px; font-size:11px; color:var(--ink-3); word-break:break-all; }
+.pd-card-tipo { font-size:10px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-3); }
+@media (max-width:767px) { .car-grid { grid-template-columns:1fr; } }

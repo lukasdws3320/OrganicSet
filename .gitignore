@@ -1,0 +1,36 @@
+# Arquivos de sistema (Mac e Windows)
+._*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependências e builds: o instalador refaz no computador de cada um
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+
+# Dados, saídas e trabalhos de cada pessoa
+trabalhos/
+app/InstagramReferenceHub/library/
+app/GoogleFlowMCP/outputs/
+memoria/logs/
+
+# Gerados pelo instalador (scripts/painel.py) e atalho do Codex
+Reference Hub.html
+hub/dados.js
+.agents/
+
+# Pacotes prontos
+distribuicao/*.zip
+
+# Chaves e configurações locais: nunca vão para o GitHub
+.env
+.env.*
+secrets/
+*.log
+.claude/settings.local.json
+
+# Documento antigo do setup do Matheus com dados pessoais
+app/InstagramReferenceHub/docs/planos/2026-11-03-skills-execucao-padronizada.patch

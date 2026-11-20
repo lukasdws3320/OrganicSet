@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-density="compact">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Instagram Reference Hub</title>
+    <link rel="icon" href="/brand/monograma-branca.svg" />
+    <link rel="preload" href="/brand/font-3.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/brand/font-0.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/brand/font-7.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // Tema antes do primeiro paint: preferência salva, senão a do sistema.
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("irh-theme"); } catch (e) {}
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<title>%%TITULO%%</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Folha de produção: cabeçalho com método, depois um corte por linha (quadros à esquerda, fala e prompt à direita) */
+:root{
+ --bg:#f3f5f8; --surface:#ffffff; --fg:#15233b; --muted:#5b6880; --line:#d9dfe8;
+ --accent:#1f4fa0; --lime:#5f9e1e;
+ --ok-bg:#e3f2d6; --ok-fg:#2f5e0c; --warn-bg:#fdf0cf; --warn-fg:#7a5300;
+ --bad-bg:#fde2df; --bad-fg:#9b2418; --none-bg:#e6e9ef; --none-fg:#465268;
+ --prompt-bg:#eef2f8;
+ --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+ --f-body:"Figtree","Segoe UI",system-ui,sans-serif;
+ --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#0e1522; --surface:#152033; --fg:#e4eaf4; --muted:#9aa7bd; --line:#26344d;
+ --accent:#86aefc; --lime:#9fd364;
+ --ok-bg:#1f3a12; --ok-fg:#b7e58c; --warn-bg:#3d2f0a; --warn-fg:#f3cf75;
+ --bad-bg:#45161b; --bad-fg:#ffaea5; --none-bg:#232f44; --none-fg:#b8c3d6;
+ --prompt-bg:#1a2840; color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#0e1522; --surface:#152033; --fg:#e4eaf4; --muted:#9aa7bd; --line:#26344d;
+ --accent:#86aefc; --lime:#9fd364;
+ --ok-bg:#1f3a12; --ok-fg:#b7e58c; --warn-bg:#3d2f0a; --warn-fg:#f3cf75;
+ --bad-bg:#45161b; --bad-fg:#ffaea5; --none-bg:#232f44; --none-fg:#b8c3d6;
+ --prompt-bg:#1a2840; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--f-body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;gap:28px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,4.2vw,40px);font-weight:800;letter-spacing:-.01em}
+.sub{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin-top:14px}
+.meta b{color:var(--fg);font-weight:600}
+.etiqueta{font:600 11px/1 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.metodo{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 24px;display:grid;gap:14px}
+.metodo ol{margin:0;padding-left:22px;display:grid;gap:10px;max-width:90ch}
+.metodo li::marker{font-family:var(--f-display);font-weight:700;color:var(--accent)}
+.montagem{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px;max-width:90ch}
+.montagem p{margin:0}
+.barra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.resumo{display:flex;flex-wrap:wrap;gap:6px}
+.filtros{display:flex;flex-wrap:wrap;gap:6px}
+.filtros button{font:500 13px var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer}
+.filtros button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chip{display:inline-block;font:600 12px/1 var(--f-body);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.chip.ok{background:var(--ok-bg);color:var(--ok-fg)}
+.chip.ressalva{background:var(--warn-bg);color:var(--warn-fg)}
+.chip.refazer{background:var(--bad-bg);color:var(--bad-fg)}
+.chip.falta{background:var(--none-bg);color:var(--none-fg)}
+.chip.agerar{background:var(--prompt-bg);color:var(--accent)}
+.lista{display:grid;gap:18px}
+.corte{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:14px}
+.corte-cab{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.corte-cab h2{font-size:20px;font-weight:700}
+.tc{font:500 13px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums;margin-left:auto}
+.corpo{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;align-items:start}
+.quadros{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+figure{margin:0;display:grid;gap:6px}
+figure img,figure video,.vazio div{width:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;background:var(--prompt-bg);display:block}
+.vazio div{display:grid;place-items:center;color:var(--muted);font-size:13px;border:1px dashed var(--line)}
+figcaption{font-size:12px;color:var(--muted);line-height:1.3}
+.texto{min-width:0;display:grid;gap:8px;align-content:start}
+.texto h3{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.texto h3 .fino{font:400 12px var(--f-body);text-transform:none;letter-spacing:0}
+.nota{margin:0;padding:10px 12px;border-radius:6px;background:var(--prompt-bg);font-size:14px}
+.corte[data-estado="refazer"] .nota{background:var(--bad-bg);color:var(--bad-fg)}
+.corte[data-estado="falta"] .nota{background:var(--none-bg);color:var(--none-fg)}
+.corte[data-estado="ressalva"] .nota{background:var(--warn-bg);color:var(--warn-fg)}
+.fala{margin:0;font-size:15px}
+.fala.muda{color:var(--muted);font-style:italic}
+.quem{font:600 12px var(--f-body);color:var(--lime);text-transform:uppercase;letter-spacing:.05em;margin-right:4px}
+.prompt{margin:0;font:400 12.5px/1.6 var(--f-mono);background:var(--prompt-bg);border-radius:6px;padding:12px 14px;max-height:15em;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.copiar{justify-self:start;font:500 13px var(--f-body);border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:6px;padding:6px 12px;cursor:pointer}
+details{display:grid;gap:8px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:14px}
+details .prompt{margin-top:8px}
+details .copiar{margin-top:8px}
+@media (max-width:860px){.corpo{grid-template-columns:minmax(0,1fr)}.tc{margin-left:0;width:100%}}
+@media (max-width:460px){.quadros{grid-template-columns:repeat(2,minmax(0,1fr))}.quadros figure:nth-child(3){grid-column:1/-1}.quadros figure:nth-child(3) video,.quadros figure:nth-child(3) .vazio div{max-width:60%}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+ <header>
+  <span class="etiqueta">Alteração pontual · %%REF%%</span>
+  <h1>%%TITULO%%</h1>
+  <p class="sub">%%SUB%%</p>
+  <div class="meta">
+   <span><b>%%N%%</b> trechos</span><span>Duração final <b>%%TOTAL%%</b></span><span>9:16 · 720p</span><span>Áudio: só a fala, sem música</span>
+  </div>
+ </header>
+
+ <section class="metodo" aria-labelledby="como">
+  <span class="etiqueta" id="como">Como cada trecho foi feito</span>
+  <ol>
+   <li><b>Cortes.</b> O vídeo original foi dividido nos cortes de câmera. Trecho maior que 8 s foi partido na pausa da fala, o que deu %%N%% trechos.</li>
+   <li><b>Imagem inicial.</b> O primeiro quadro de cada trecho foi editado no Nano Banana Pro com a alteração: %%ALTERACAO%%. O resto do quadro ficou igual.</li>
+   <li><b>Vídeo.</b> %%PASSO_VIDEO%%</li>
+   <li><b>Conferência.</b> %%PASSO_CONFERENCIA%%</li>
+  </ol>
+  <div class="montagem">
+   <span class="etiqueta">Para a montagem</span>
+   <p>Todo clipe sai com 8 s. Use só o começo de cada um, pela duração indicada em "usar", e junte na ordem %%ORDEM%%.</p>
+   %%MODELOS%%
+   <p>Os arquivos dos clipes vão numa pasta à parte, com os mesmos nomes desta página.</p>
+  </div>
+ </section>
+
+ <div class="barra">
+  <div class="resumo">%%RESUMO%%</div>
+  <div class="filtros" role="group" aria-label="Filtrar cortes">
+   <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+   <button type="button" data-f="ok" aria-pressed="false">Prontos</button>
+   <button type="button" data-f="pendente" aria-pressed="false">Pendentes</button>
+  </div>
+ </div>
+
+ <main class="lista">
+%%CARDS%%
+ </main>
+</div>
+
+<script>
+document.querySelectorAll('.copiar').forEach(b=>b.addEventListener('click',()=>{
+ const el=document.getElementById(b.dataset.alvo),txt=el.textContent,orig=b.textContent;
+ const marcar=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);};
+ const ok=()=>{b.textContent='Copiado';setTimeout(()=>b.textContent=orig,1600);};
+ try{navigator.clipboard.writeText(txt).then(ok,()=>{marcar();b.textContent='Selecionado: Ctrl+C';setTimeout(()=>b.textContent=orig,2200);});}
+ catch(e){marcar();}
+}));
+const botoes=document.querySelectorAll('.filtros button');
+botoes.forEach(b=>b.addEventListener('click',()=>{
+ botoes.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+ const f=b.dataset.f;
+ document.querySelectorAll('.corte').forEach(c=>{const e=c.dataset.estado;
+  c.hidden=!(f==='todos'||(f==='ok'&&(e==='ok'||e==='ressalva'))||(f==='pendente'&&(e==='refazer'||e==='falta'||e==='agerar')));});
+}));
+</script>

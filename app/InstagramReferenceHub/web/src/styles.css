@@ -1,0 +1,212 @@
+@import "tailwindcss";
+/* Fonte única de tokens (cópia byte a byte de ClientesRoadmap/design/tokens.css; tests/design-tokens.test.ts confere). */
+@import "./design/tokens.css";
+/* Componentes com os mesmos nomes de classe dos painéis (.btn, .st, .ig, .seg, .facet, .chip…).
+   Na camada components: utilitários do Tailwind continuam podendo ajustar uma instância. */
+@import "./design/components.css" layer(components);
+
+/* Fontes do brand kit (WOFF2 locais, sem serviço externo). */
+@font-face { font-family: "DM Mono"; font-weight: 400; font-display: swap; src: url(/brand/font-0.woff2) format("woff2"); }
+@font-face { font-family: "DM Mono"; font-weight: 500; font-display: swap; src: url(/brand/font-1.woff2) format("woff2"); }
+@font-face { font-family: "DM Sans"; font-weight: 300; font-display: swap; src: url(/brand/font-2.woff2) format("woff2"); }
+@font-face { font-family: "DM Sans"; font-weight: 400; font-display: swap; src: url(/brand/font-3.woff2) format("woff2"); }
+@font-face { font-family: "DM Sans"; font-weight: 500; font-display: swap; src: url(/brand/font-4.woff2) format("woff2"); }
+@font-face { font-family: "DM Sans"; font-weight: 600; font-display: swap; src: url(/brand/font-5.woff2) format("woff2"); }
+@font-face { font-family: "DM Serif Display"; font-style: italic; font-display: swap; src: url(/brand/font-6.woff2) format("woff2"); }
+@font-face { font-family: "DM Serif Display"; font-style: normal; font-display: swap; src: url(/brand/font-7.woff2) format("woff2"); }
+
+/* Aliases dos nomes antigos → tokens novos (SPEC §2). As páginas ainda não migradas
+   (bg-bg, text-fg, text-muted, bg-accent, var(--surface)…) passam a usar a paleta nova sem quebrar.
+   Definidos em :root: o tema troca os tokens no próprio :root, então os aliases acompanham. */
+:root {
+  --bg: var(--paper);
+  --surface: var(--sunken);
+  --raised: var(--card);
+  --fg: var(--ink);
+  --muted: var(--ink-2);
+  --faint: var(--ink-3);
+  --accent: var(--brasa);
+  --accent-ink: var(--brasa-ink);
+  --on-accent: var(--on-brasa);
+  --line-soft: color-mix(in srgb, var(--line) 60%, var(--paper));
+  --img-outline: color-mix(in srgb, var(--ink) 10%, transparent);
+  --scrim: rgb(20 18 15 / 0.55);
+}
+:root[data-theme="dark"] { --scrim: rgb(0 0 0 / 0.72); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --scrim: rgb(0 0 0 / 0.72); } }
+
+@theme inline {
+  /* tokens novos */
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-sunken: var(--sunken);
+  --color-media-bg: var(--media-bg);
+  --color-ink: var(--ink);
+  --color-on-ink: var(--on-ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-brasa: var(--brasa);
+  --color-on-brasa: var(--on-brasa);
+  --color-brasa-ink: var(--brasa-ink);
+  --color-brasa-wash: var(--brasa-wash);
+  --color-late: var(--late);
+  --color-late-wash: var(--late-wash);
+  --color-wait: var(--wait);
+  --color-wait-wash: var(--wait-wash);
+  --color-warn: var(--warn);
+  --color-warn-wash: var(--warn-wash);
+  --color-night: var(--night);
+  --color-on-night: var(--on-night);
+  --color-night-2: var(--night-2);
+  --color-night-3: var(--night-3);
+  --color-focus: var(--focus);
+  /* nomes antigos (aliases) */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-line-soft: var(--line-soft);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-on-accent: var(--on-accent);
+  --font-sans: var(--f-sans);
+  --font-display: var(--f-serif);
+  --font-serif: var(--f-serif);
+  --font-mono: var(--f-mono);
+  --radius-r1: var(--r-1);
+  --radius-r2: var(--r-2);
+  --radius-r3: var(--r-3);
+  --radius-r4: var(--r-4);
+  --ease-reveal: var(--ease);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    min-height: 100dvh;
+    background: var(--paper);
+    font-size: var(--fs-14);
+    line-height: 1.5;
+  }
+  /* Hub = densidade compacta (SPEC §2): base 13. */
+  [data-density="compact"] body { font-size: var(--fs-13); }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--brasa); color: var(--on-brasa); }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  input, textarea, select { font: inherit; color: inherit; }
+  input[type="date"]::-webkit-calendar-picker-indicator { filter: var(--date-icon-filter, none); opacity: 0.6; }
+  [data-theme="dark"] input[type="date"] { --date-icon-filter: invert(1); }
+  * { scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+}
+
+@layer components {
+  /* Rótulo técnico: DM Mono, caixa alta (SPEC §2: só onde é redundante). */
+  .eyebrow {
+    font-family: var(--f-mono);
+    font-size: var(--fs-11);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+  .title-serif { font-family: var(--f-serif); font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; text-wrap: balance; }
+  .title-serif em { font-style: italic; }
+
+  .img-outline { outline: 1px solid var(--img-outline); outline-offset: -1px; }
+
+  /* Grão 2,4% do manual, só atrás de superfícies com textura. */
+  .grain { position: relative; isolation: isolate; }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(/brand/grain.svg);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Monograma e assinatura via máscara: uma arte, cor do tema. */
+  .mark {
+    background: currentColor;
+    mask: var(--src) center / contain no-repeat;
+    -webkit-mask: var(--src) center / contain no-repeat;
+  }
+
+  .field {
+    width: 100%;
+    min-height: var(--hit);
+    background: var(--card);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-2);
+    padding: 7px 12px;
+    font-size: var(--fs-14);
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .field:hover { border-color: var(--ink-3); }
+  .field:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+  .field:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; box-shadow: none; }
+  .field::placeholder { color: var(--ink-3); }
+  textarea.field { resize: vertical; line-height: 1.55; }
+
+  .press { transition-property: scale, background-color, color, border-color, opacity; transition-duration: var(--t-fast); }
+  .press:active:not(:disabled) { scale: 0.97; }
+
+  .reveal { animation: reveal 600ms var(--ease) both; }
+  .fade-in { animation: fade var(--t-med) var(--ease) both; }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes spin { to { rotate: 360deg; } }
+@keyframes progress-sweep { from { translate: -100% 0; } to { translate: 300% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* LEGADO até o H4 trocar o Dashboard por "Hoje": arte de refração do topo do Dashboard.
+   O Empty() já não usa (SPEC §4.12). */
+[data-theme="dark"] .refracao-art { filter: invert(1) hue-rotate(180deg) saturate(0.8); }
+.refracao-band { min-height: 320px; }
+@media (min-width: 640px) { .refracao-band { min-height: 440px; } }
+.refracao-frame { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.refracao-frame > .refracao-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 72%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 72%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* Fileira horizontal de posts (Hoje): o carrossel de 1 slide não segura o gesto lateral do trackpad. */
+.trilho .ig-track{overscroll-behavior-x:auto}
+.trilho .ig-track:has(> .ig-slide:only-child){overflow-x:hidden}
+@media (pointer:fine){.trilho{scroll-snap-type:none}}

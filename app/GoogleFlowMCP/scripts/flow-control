@@ -1,0 +1,7 @@
+#!/bin/sh
+''''exec "${IRH_HARNESS_PYTHON:-$HOME/.local/share/uv/tools/browser-harness/bin/python}" "$0" "$@" # '''
+import os
+# Windows: o Avast define SSLKEYLOGFILE num pipe (\\.\aswMonFltProxy...) e o OpenSSL do harness cai com "no OPENSSL_Applink".
+if os.environ.get('SSLKEYLOGFILE','').startswith('\\\\.\\'):os.environ.pop('SSLKEYLOGFILE')
+from flow_control import main
+raise SystemExit(main())

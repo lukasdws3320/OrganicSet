@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "la-baleine",
+    "name": "La Baleine",
+    "tipo": "operacao_propria_dr",
+    "aliases": [],
+    "vault_path": "experts/La Baleine",
+    "painel_slug": null,
+    "clients": [
+      "la-baleine"
+    ],
+    "nomes": {
+      "la-baleine": "La Baleine"
+    }
+  }
+]

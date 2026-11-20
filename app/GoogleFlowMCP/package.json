@@ -1,0 +1,31 @@
+{
+  "name": "flow-mcp",
+  "version": "0.1.0",
+  "description": "MCP/CLI local do Google Flow pela sessão existente do Browser Harness",
+  "main": "dist/control.js",
+  "scripts": {
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "build": "tsc",
+    "start": "node dist/control.js",
+    "login": "node dist/login.js",
+    "studio": "node dist/studio.js",
+    "api": "node dist/api.js",
+    "start:experimental": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bin": {
+    "flow-mcp": "dist/control.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "playwright-core": "^1.63.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
+  }
+}

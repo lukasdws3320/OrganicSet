@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ativar a execução eficiente — Reference Hub e Flow</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f5f0;color:#191919;font:17px/1.65 system-ui,sans-serif}main{max-width:900px;margin:auto;padding:48px 24px 80px}small,.role{color:#626262}small{font:12px monospace;letter-spacing:.12em}h1{font-size:clamp(30px,5vw,46px);line-height:1.12;letter-spacing:-.04em}article{border-top:1px solid #d9d6ce;padding:25px 0}label{display:flex;gap:12px;font-size:20px;font-weight:650;line-height:1.4}input{width:22px;height:22px;accent-color:#191919;flex-shrink:0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;border:1px solid #ddd8ce;border-radius:8px;padding:18px;font:14px/1.6 ui-monospace,monospace}button{border:0;border-radius:6px;background:#191919;color:white;font:600 14px system-ui;padding:11px 16px;cursor:pointer}aside{border-left:3px solid #191919;padding:4px 20px;margin:28px 0}a{color:inherit;text-underline-offset:4px}.role{font-size:14px}footer{border-top:1px solid #d9d6ce;padding-top:22px;font-size:14px}
+</style>
+<main><small>MARCOLINO · 27/10/2026</small><h1>Ativar as melhorias sem repetir a produção</h1>
+<p>Skill, CLI e MCP foram atualizados nos arquivos compartilhados. O CLI usa o código novo na próxima chamada. A sessão do Claude precisa reler as instruções; ferramentas novas do MCP aparecem na reconexão. O código da API do Hub precisa de recarga controlada do processo.</p>
+<aside>O ajuste de ferramenta foi testado sem gerar mídia, reenviar shots ou gastar créditos do Flow. Os manifestos existentes continuam preservados. “Baixado”, “revisão registrada” e aprovação humana são estados distintos.</aside>
+<article><label><input type="checkbox"><span>1. Fazer a sessão principal reler o procedimento</span></label>
+<p class="role">Matheus: copiar a mensagem abaixo. Claude da sessão principal: ler e aplicar na próxima operação.</p>
+<pre id="handoff">Foram implementadas melhorias na skill e no controlador compartilhados. Antes da próxima operação, releia:
+app/InstagramReferenceHub/.claude/skills/replicar-referencia/SKILL.md
+app/GoogleFlowMCP/AGENTS.md
+app/GoogleFlowMCP/docs/execucao-eficiente.md
+
+Use o CLI canônico, sem recriar scripts temporários de envio/coleta. Para concorrência, prepare-batch-tabs preserva os vínculos; run-batch --targets --workers usa abas isoladas e orçamento agregado. Uma aba continua serial; renders de trabalhos independentes podem se sobrepor. Downloads têm lock compartilhado.
+
+Use collect-batch para coleta por rodízio com prazo por shot. batch-status/flow_batch_status dão resumo compacto. Acompanhe a sessão de terminal e aguarde resultado/notificação, sem agentes LLM para polling ou loops longos de shell. Ao indicar recover_existing, investigue o resultado existente; não regenere automaticamente nem atribua a ausência a filtro/cobrança sem prova.
+
+Reaproveite análise e imagens válidas. Preserve modelos/esforços pedidos e encaminhe ao revisor somente outputs novos/alterados. A revisão final precisa de recibo flow-clip-review/v1 com hash exato, revisor/modelo observado, data e exame de áudio/imagem. Retake exige revisão própria. Recupere relatórios antigos verificáveis antes de refazer uma revisão. Uma frase “Opus por clipe” não prova revisão da versão final.
+
+Use build-delivery/audit-delivery e mantenha entregas parciais e pendências explícitas. Os manifestos antigos não foram modificados por esta correção. Não regenere o lote como consequência desta mensagem.
+
+O build do MCP já foi feito. Se o inventário da sessão ainda não mostrar flow_batch_status e flow_audit_delivery, reconecte o MCP na pausa apropriada; os comandos equivalentes já funcionam pelo CLI. Recarregue o Hub pelo procedimento do MarcolinoOS na pausa segura para a API servir reviewStatus. Preserve filas, planos, mídias, abas e processos de outros trabalhos.</pre>
+<button data-copy="handoff">Copiar mensagem</button><p>Conferir: a sessão reconhece os comandos novos e não inicia outra geração para testar a atualização.</p></article>
+<article><label><input type="checkbox"><span>2. Atualizar as conexões na pausa adequada</span></label>
+<p class="role">Claude da sessão principal: conferir atividade, reconectar o MCP e recarregar o Hub pelo controlador. Matheus: intervir só se a interface exigir.</p>
+<p>Não instalar outro plugin nem duplicar serviços. CLI atualizado funciona imediatamente; MCP stdio mantém o inventário até reconectar. O Hub tem <a href="../OPERACAO.md">procedimento de runtime</a>; a compilação da interface não reinicia o processo.</p>
+<p>Conferir: <code>flow_batch_status</code> e <code>flow_audit_delivery</code> aparecem no MCP. No Hub, um clipe sem recibo da versão final mostra revisão pendente, mesmo que esteja baixado.</p></article>
+<article><label><input type="checkbox"><span>3. Verificar a próxima execução autorizada</span></label>
+<p class="role">Claude da sessão principal: produzir e registrar evidências. Matheus: avaliar o resultado quando solicitado.</p>
+<p>Usar os limites de tempo configuráveis conforme o modelo/modo observado. Conferir que um shot parado não bloqueia os independentes, que uma retomada não repete envio incerto e que retakes só recebem revisão após examinar a versão nova. A primeira execução real deve registrar tempos e consultas para medir a economia; os testes locais não estimam preço nem tempo do provedor.</p>
+<p>Conferir: arquivos existentes reaproveitados, intenções preservadas, exceções identificadas, orçamento respeitado e revisão por hash. Publicar no painel cada entrega pronta, mantendo as pendências separadas.</p></article>
+<footer><a href="../../GoogleFlowMCP/docs/execucao-eficiente.md">Procedimento técnico</a> · <a href="../../GoogleFlowMCP/docs/revisoes/2026-10-26-execucao-eficiente/relatorio.md">Relatório e limites</a>. Arquivo autossuficiente, sem CDN.</footer>
+</main><script>
+for(const button of document.querySelectorAll('[data-copy]'))button.addEventListener('click',async()=>{const text=document.getElementById(button.dataset.copy).textContent;try{await navigator.clipboard.writeText(text)}catch{const a=document.createElement('textarea');a.value=text;document.body.append(a);a.select();const ok=document.execCommand('copy');a.remove();if(!ok){button.textContent='Selecione o texto acima para copiar';return}}button.textContent='Copiado';setTimeout(()=>button.textContent='Copiar mensagem',1800)});
+</script></html>

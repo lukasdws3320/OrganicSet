@@ -1,0 +1,4 @@
+Projeto de exemplo: anuncio La Baleine (troca da caixa de bicarbonato).
+falas.json = as 25 falas na ordem, com quem fala e o corte de cada uma.
+Pagina com imagens e prompts: https://claude.ai/artifact/PSCMYjWgQXMMh7QqqFqi1E
+Salve aqui o audio do MiniMax e cole o caminho dele no chat do Claude.

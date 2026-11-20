@@ -1,0 +1,15 @@
+.env*
+secrets/
+data/
+node_modules/
+/dist/
+web/dist/
+/backups/
+*.log
+.DS_Store
+cookies*.txt
+/library/
+/tmp/
+test-results/
+.claude/settings.local.json
+.tmp-audit/

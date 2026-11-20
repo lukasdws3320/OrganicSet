@@ -1,0 +1,30 @@
+{
+  "name": "instagram-reference-hub",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run server/index.ts --dev & bunx vite --config web/vite.config.ts",
+    "build": "bunx vite build --config web/vite.config.ts",
+    "start": "bun run server/index.ts",
+    "app:sem-retomada": "PATH=\"$HOME/.bun/bin:$PATH\" bun run build && PATH=\"$HOME/.bun/bin:$PATH\" bun run server/index.ts --sem-retomar",
+    "app": "PATH=\"$HOME/.bun/bin:$PATH\" bun run build && PATH=\"$HOME/.bun/bin:$PATH\" bun run server/index.ts",
+    "test": "bun test",
+    "verify": "bun run scripts/verify-acceptance.ts",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "lucide-react": "^1.57.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/bun": "^1.4.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

@@ -1,0 +1,191 @@
+/* Aba Funis: lista, swipe e editor visual. Só tokens do Brand Atlas (tokens.css); cor de etapa vem por --c. */
+
+/* ---------- cards e miniatura ---------- */
+.funil-mini { display: block; }
+.funil-mini--vazio { display: grid; place-items: center; font-size: 12px; color: var(--ink-3); }
+.funil-mini-no { fill: var(--card); stroke: var(--line-2); stroke-width: 2; }
+.funil-mini-linha { fill: none; stroke: var(--ink-3); stroke-width: 4; opacity: .55; }
+.funil-mini-txt { font: 500 24px var(--f-sans); fill: var(--ink-2); }
+.funil-card { overflow: hidden; }
+
+.funil-tipo {
+  display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 7px; border-radius: 999px;
+  font-size: 11px; color: var(--ink-2); background: color-mix(in srgb, var(--c) 14%, transparent);
+}
+.funil-tipo svg { color: var(--c); }
+.funil-status { font-size: 11px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--ink-2); }
+.funil-status--ativo { background: var(--brasa-wash); border-color: transparent; color: var(--brasa-ink); }
+.funil-status--pausado { background: var(--warn-wash); border-color: transparent; color: var(--warn); }
+.funil-status--arquivado { opacity: .6; }
+.funil-tag { font-size: 10.5px; padding: 1px 6px; border-radius: 999px; background: var(--sunken); color: var(--ink-2); }
+
+.funil-dm {
+  display: block; padding: 10px 12px; border-radius: 16px 16px 16px 4px; background: var(--sunken);
+  font-size: 12.5px; line-height: 1.45; color: var(--ink); white-space: pre-line;
+  display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden;
+}
+.funil-bio { display: flex; flex-direction: column; gap: 3px; padding: 12px; border-radius: var(--r-3); border: 1px solid var(--line); font-size: 12.5px; line-height: 1.4; white-space: pre-line; }
+.funil-bio b { font-weight: 600; }
+.funil-bio-link { color: var(--wait); font-weight: 500; }
+.funil-pick:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--r-2); }
+
+/* ---------- editor ---------- */
+/* Altura = tela − barra do topo − respiro do <main> (topo e base): a página não rola, só o quadro. */
+.funil-editor { display: flex; flex-direction: column; height: calc(100dvh - 144px); min-height: 520px; }
+@media (min-width: 1024px) { .funil-editor { height: calc(100dvh - 152px); } }
+.funil-topo { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-bottom: 10px; }
+.funil-nome {
+  flex: 1 1 220px; min-width: 0; height: 36px; padding: 0 8px; border: 1px solid transparent; border-radius: var(--r-2);
+  background: transparent; font: 400 22px/1 var(--f-serif); color: var(--ink);
+}
+.funil-nome:hover { border-color: var(--line-2); }
+.funil-nome:focus { outline: none; border-color: var(--ink); }
+.funil-salvo { font-size: 11.5px; color: var(--ink-3); min-width: 72px; text-align: right; }
+
+.funil-corpo { position: relative; flex: 1; min-height: 0; display: grid; grid-template-columns: 196px 1fr 300px; border: 1px solid var(--line); border-radius: var(--r-3); overflow: hidden; background: var(--card); }
+.funil-paleta { overflow-y: auto; padding: 12px 8px; border-right: 1px solid var(--line); background: var(--paper); }
+.funil-paleta-grupo { margin: 12px 4px 4px; font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
+.funil-paleta-item {
+  display: flex; align-items: center; gap: 8px; width: 100%; height: 32px; padding: 0 8px; border-radius: var(--r-2);
+  font-size: 13px; color: var(--ink-2); text-align: left; transition: background var(--t-fast);
+}
+.funil-paleta-item svg:first-child { color: var(--c); }
+.funil-paleta-item:hover { background: var(--card); color: var(--ink); box-shadow: var(--sh-1); }
+.funil-paleta-item:hover svg:last-child { opacity: 1; }
+
+.funil-area {
+  position: relative; overflow: hidden; touch-action: none; cursor: grab; user-select: none;
+  background-color: var(--sunken);
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--ink-3) 35%, transparent) 1px, transparent 1.2px);
+}
+.funil-area.is-pan { cursor: grabbing; }
+.funil-mundo { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.funil-linhas { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; pointer-events: none; }
+.funil-conexao { cursor: pointer; }
+.funil-hit { fill: none; stroke: transparent; stroke-width: 16; pointer-events: stroke; }
+.funil-linha { fill: none; stroke: var(--ink-3); stroke-width: 2; }
+.funil-conexao:hover .funil-linha { stroke: var(--ink-2); }
+.funil-linha.is-on { stroke: var(--brasa); stroke-width: 2.5; }
+.funil-linha--temp { stroke: var(--brasa); stroke-dasharray: 6 5; }
+.funil-seta { fill: var(--ink-3); }
+.funil-seta--on { fill: var(--brasa); }
+.funil-rotulo {
+  position: absolute; transform: translate(-50%, -50%); display: inline-flex; gap: 5px; align-items: center; max-width: 180px;
+  padding: 3px 8px; border-radius: 999px; background: var(--card); box-shadow: var(--sh-1); font-size: 11.5px; color: var(--ink-2); white-space: nowrap;
+}
+.funil-rotulo span { overflow: hidden; text-overflow: ellipsis; }
+.funil-rotulo b { font-weight: 600; color: var(--ink); }
+.funil-rotulo.is-on { box-shadow: 0 0 0 1.5px var(--brasa); }
+
+.funil-no {
+  position: absolute; display: flex; flex-direction: column; gap: 6px; width: 220px; min-height: 88px; padding: 10px 12px 12px 16px; border-radius: 14px;
+  background: var(--card); box-shadow: var(--sh-1); cursor: grab; overflow: visible; transition: box-shadow var(--t-fast);
+}
+.funil-no--post { width: 300px; }
+.funil-no--pagina { width: 240px; }
+.funil-no::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; border-radius: 14px 0 0 14px; background: var(--c); }
+.funil-no:hover { box-shadow: 0 0 0 1px var(--line-2), var(--sh-2); }
+.funil-no.is-on { box-shadow: 0 0 0 2px var(--brasa), var(--sh-2); }
+.funil-no.is-alvo:hover { box-shadow: 0 0 0 2px var(--brasa); }
+.funil-no-cab { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
+.funil-no-tipo { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; letter-spacing: .02em; color: var(--ink-3); }
+.funil-no-tipo svg { color: var(--c); }
+.funil-no-titulo { font-size: 13.5px; font-weight: 600; line-height: 1.25; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.funil-no-texto { margin: 0; font-size: 11.5px; line-height: 1.35; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.funil-no-msg { margin: 0; font-size: 12px; -webkit-line-clamp: 5; }
+.funil-no-comentario { margin: 0; padding: 7px 10px; border-radius: var(--r-2); border: 1px dashed var(--line-2); font: 500 12px var(--f-mono); color: var(--ink); white-space: pre-line; }
+.funil-no-comentario::before { content: "💬 "; }
+.funil-no-aviso { margin: 0; font-size: 12px; color: var(--late); }
+.funil-no-post { cursor: default; margin: 2px -4px 0 -6px; }
+.funil-no-post .ig { box-shadow: none; border: 1px solid var(--line); }
+.funil-no-pagina { display: flex; flex-direction: column; gap: 8px; cursor: default; }
+.funil-no-celular { height: 300px; overflow: hidden; border-radius: 12px; border: 1px solid var(--line-2); background: var(--media-bg); }
+.funil-no-rodape { position: absolute; right: 8px; bottom: -10px; display: flex; gap: 4px; }
+.funil-no-rodape > span { display: inline-flex; align-items: center; gap: 3px; height: 18px; padding: 0 6px; border-radius: 999px; background: var(--card); box-shadow: var(--sh-1); font: 500 10.5px var(--f-mono); color: var(--ink-2); }
+/* Portas alinhadas ao cabeçalho (44 px do topo), igual em etapa pequena ou grande. */
+.funil-porta { position: absolute; top: 44px; width: 14px; height: 14px; margin-top: -7px; border-radius: 50%; background: var(--card); border: 2px solid var(--ink-3); z-index: 1; }
+.funil-porta--in { left: -7px; pointer-events: none; opacity: 0; }
+.funil-no:hover .funil-porta--in, .funil-no.is-alvo .funil-porta--in { opacity: 1; }
+.funil-porta--out { right: -7px; cursor: crosshair; }
+.funil-porta--out:hover { border-color: var(--brasa); background: var(--brasa); transform: scale(1.3); }
+@media (pointer: coarse) { .funil-porta--out { width: 22px; height: 22px; margin-top: -11px; right: -11px; } }
+
+/* prévia de página: print/captura ou a página viva reduzida (iframe sem clique) */
+.funil-previa { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; background: var(--media-bg); }
+.funil-previa--vivo { position: relative; overflow: hidden; }
+.funil-previa--vivo iframe { position: absolute; left: 0; top: 0; width: 182%; height: 182%; border: 0; transform: scale(.55); transform-origin: 0 0; pointer-events: none; background: #fff; }
+.funil-previa--vazia { display: grid; place-items: center; color: var(--ink-3); }
+.funil-ver { position: absolute; left: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 9px; border-radius: 999px; background: color-mix(in srgb, var(--night) 82%, transparent); color: var(--on-night); font-size: 11.5px; opacity: 0; transition: opacity var(--t-fast); }
+.funil-card:hover .funil-ver, .funil-card:focus-visible .funil-ver, button:hover > .funil-ver, button:focus-visible > .funil-ver { opacity: 1; }
+@media (pointer: coarse) { .funil-ver { opacity: 1; } }
+.funil-editar { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 999px; background: var(--card); box-shadow: var(--sh-1); color: var(--ink-2); }
+.funil-editar:hover { color: var(--ink); }
+
+/* menu "próxima etapa" e etapa sendo arrastada da paleta */
+.funil-menu { position: absolute; z-index: 3; width: 220px; padding: 6px; border-radius: var(--r-3); background: var(--card); box-shadow: var(--sh-2); }
+.funil-menu-tit { margin: 2px 6px 6px; font-size: 11px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.funil-menu-item { display: flex; align-items: center; gap: 8px; width: 100%; height: 32px; padding: 0 8px; border-radius: var(--r-2); font-size: 13px; color: var(--ink-2); text-align: left; }
+.funil-menu-item svg { color: var(--c); }
+.funil-menu-item:hover, .funil-menu-item:focus-visible { background: var(--sunken); color: var(--ink); outline: none; }
+.funil-fantasma {
+  position: fixed; z-index: 60; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px;
+  border-radius: 999px; background: var(--card); box-shadow: 0 0 0 2px var(--c), var(--sh-2); font-size: 13px; color: var(--ink); pointer-events: none;
+}
+.funil-fantasma svg { color: var(--c); }
+.funil-area.is-soltando { box-shadow: inset 0 0 0 2px var(--brasa); }
+.funil-paleta-alca { color: var(--ink-3); opacity: .5; margin-left: -4px; }
+.funil-paleta-item { cursor: grab; touch-action: none; }
+
+/* visualizador de página */
+.funil-viewer { display: grid; grid-template-columns: 240px 1fr; gap: 0; height: min(78vh, 900px); border-top: 1px solid var(--line); }
+.funil-viewer-lado { display: flex; flex-direction: column; min-height: 0; overflow-y: auto; padding: 12px; border-right: 1px solid var(--line); }
+.funil-viewer-item { display: flex; align-items: center; gap: 7px; width: 100%; min-height: 32px; padding: 4px 8px; border-radius: var(--r-2); font-size: 12.5px; color: var(--ink-2); text-align: left; }
+.funil-viewer-item:hover { background: var(--sunken); color: var(--ink); }
+.funil-viewer-item.is-on { background: var(--sunken); color: var(--ink); box-shadow: inset 2px 0 0 var(--brasa); }
+.funil-viewer-palco { display: flex; flex-direction: column; min-width: 0; min-height: 0; padding: 12px; background: var(--sunken); overflow: auto; }
+.funil-viewer-barra { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.funil-viewer-moldura { flex: 1; min-height: 0; width: 100%; border-radius: var(--r-2); overflow: hidden; background: #fff; box-shadow: var(--sh-1); }
+.funil-viewer-moldura.is-celular { width: 390px; max-width: 100%; margin: 0 auto; border-radius: 22px; border: 6px solid var(--night); }
+.funil-viewer-moldura iframe { display: block; width: 100%; height: 100%; border: 0; }
+.funil-viewer-capturas { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; align-content: start; }
+.funil-viewer-capturas img { width: 100%; border-radius: var(--r-2); border: 1px solid var(--line); background: var(--card); }
+@media (max-width: 767px) {
+  .funil-viewer { grid-template-columns: 1fr; grid-template-rows: auto 1fr; height: 82vh; }
+  .funil-viewer-lado { max-height: 150px; border-right: 0; border-bottom: 1px solid var(--line); }
+}
+
+.funil-vazio { position: absolute; inset: 0; margin: auto; width: min(380px, 90%); height: fit-content; padding: 20px; text-align: center; border-radius: var(--r-3); background: var(--card); box-shadow: var(--sh-1); }
+.funil-zoom { position: absolute; left: 12px; bottom: 12px; display: flex; align-items: center; padding: 2px; border-radius: var(--r-2); background: var(--card); box-shadow: var(--sh-1); }
+
+.funil-inspetor { border-left: 1px solid var(--line); background: var(--card); overflow: hidden; }
+.funil-vinculo { display: flex; gap: 8px; padding: 8px; border-radius: var(--r-2); border: 1px solid var(--line); }
+.funil-vinculo img, .funil-vinculo-sem { width: 38px; height: 54px; flex-shrink: 0; border-radius: var(--r-1); object-fit: cover; object-position: top; background: var(--media-bg); }
+.funil-vinculo.is-quebrado { border-color: var(--late); background: var(--late-wash); }
+.funil-link { display: inline-flex; align-items: center; gap: 3px; font-size: 11.5px; color: var(--ink-2); text-decoration: underline; text-underline-offset: 2px; }
+.funil-link:hover { color: var(--ink); }
+.funil-saida { display: flex; width: 100%; gap: 8px; padding: 6px 8px; border-radius: var(--r-2); font-size: 12.5px; text-align: left; }
+.funil-saida:hover { background: var(--sunken); }
+
+/* tablet: paleta vira faixa no topo; inspetor flutua por cima do quadro quando há seleção */
+@media (max-width: 1023px) {
+  .funil-corpo { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .funil-paleta { display: flex; gap: 4px; overflow-x: auto; padding: 6px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .funil-paleta > div { display: contents; }
+  .funil-paleta-grupo, .funil-paleta > .eyebrow { display: none; }
+  .funil-paleta-item { width: auto; flex-shrink: 0; white-space: nowrap; }
+  .funil-inspetor { position: absolute; right: 0; top: 45px; bottom: 0; width: min(320px, 100%); box-shadow: var(--sh-2); transform: translateX(105%); transition: transform var(--t-med) var(--ease); z-index: 2; }
+  .funil-inspetor.is-aberto { transform: none; }
+}
+@media (max-width: 767px) {
+  .funil-editor { height: calc(100dvh - 190px); }
+  .funil-inspetor { top: auto; height: 62%; width: 100%; border-left: 0; border-top: 1px solid var(--line); transform: translateY(105%); border-radius: var(--r-3) var(--r-3) 0 0; }
+}
+.funil-pick-tag { position:absolute; left:6px; bottom:6px; padding:1px 6px; border-radius:var(--r-1); background:rgb(0 0 0 / .6); color:#fff; font-family:var(--f-mono); font-size:10px; letter-spacing:.02em; }
+.funil-viewer-moldura { position: relative; }
+.funil-viewer-carregando { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s-2); padding: var(--s-4); background: var(--card); color: var(--ink-2); font-size: var(--fs-13); text-align: center; }
+.funil-viewer-spin { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--ink-2); animation: funil-gira .8s linear infinite; }
+@keyframes funil-gira { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .funil-viewer-spin { animation-duration: 2.4s; } }
+/* Passou de 10 s: sai da frente da página (ela pode já estar visível) e vira um aviso pequeno embaixo. */
+.funil-viewer-carregando.is-demorando { inset: auto var(--s-2) var(--s-2); flex-direction: row; flex-wrap: wrap; gap: var(--s-1) var(--s-2); padding: var(--s-2) var(--s-3); border-radius: var(--r-2); box-shadow: var(--sh-1); font-size: var(--fs-12); }
+.funil-viewer-carregando.is-demorando p { margin: 0; }

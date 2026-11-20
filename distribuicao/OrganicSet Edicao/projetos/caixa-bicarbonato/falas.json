@@ -1,0 +1,152 @@
+[
+ {
+  "id": "F01",
+  "corte": "SHOT01",
+  "quem": "filha",
+  "texto": "Mom, chocolate at ten at night?"
+ },
+ {
+  "id": "F02",
+  "corte": "SHOT01",
+  "quem": "mãe",
+  "texto": "Relax, I'm baking cookies tomorrow. Baking soda's right here."
+ },
+ {
+  "id": "F03",
+  "corte": "SHOT02",
+  "quem": "filha",
+  "texto": "She's been saying this for months. Mom, tell them what you told me."
+ },
+ {
+  "id": "F04",
+  "corte": "SHOT02",
+  "quem": "mãe",
+  "texto": "Oh God, you're filming again?"
+ },
+ {
+  "id": "F05",
+  "corte": "SHOT03",
+  "quem": "mãe",
+  "texto": "Fine. Listen, ladies."
+ },
+ {
+  "id": "F06",
+  "corte": "SHOT04",
+  "quem": "mãe",
+  "texto": "This one box does more in my kitchen than half the stuff under my sink."
+ },
+ {
+  "id": "F07",
+  "corte": "SHOT05",
+  "quem": "mãe",
+  "texto": "Cookies, pancakes, the fridge, the sink. One box handles all of it."
+ },
+ {
+  "id": "F08",
+  "corte": "SHOT06",
+  "quem": "filha",
+  "texto": "Mom, show them the before picture."
+ },
+ {
+  "id": "F09",
+  "corte": "SHOT08",
+  "quem": "filha",
+  "texto": "So where'd you learn that trick?"
+ },
+ {
+  "id": "F10",
+  "corte": "SHOT09",
+  "quem": "mãe",
+  "texto": "My grandma. A spoon of baking soda, a splash of water, let it sit, then scrub. That's it."
+ },
+ {
+  "id": "F11",
+  "corte": "SHOT10",
+  "quem": "mãe",
+  "texto": "And no, this isn't the trick. This is just lemon water. The baking soda stays in the box."
+ },
+ {
+  "id": "F12",
+  "corte": "SHOT11",
+  "quem": "mãe",
+  "texto": "Who even says that? Not this lady."
+ },
+ {
+  "id": "F13",
+  "corte": "SHOT12",
+  "quem": "mãe",
+  "texto": "It's for baking, cleaning, and keeping the fridge smelling fresh. Simple stuff."
+ },
+ {
+  "id": "F14",
+  "corte": "SHOT13",
+  "quem": "filha",
+  "texto": "Mom, you've tried every cleaner online."
+ },
+ {
+  "id": "F15",
+  "corte": "SHOT13",
+  "quem": "mãe",
+  "texto": "I tried literally everything. Sprays, foams, wipes."
+ },
+ {
+  "id": "F16",
+  "corte": "SHOT14",
+  "quem": "mãe",
+  "texto": "None of those worked long term. Don't even get me started on the smell. Or the price tags."
+ },
+ {
+  "id": "F17",
+  "corte": "SHOT15",
+  "quem": "filha",
+  "texto": "Honestly, her kitchen's a different place."
+ },
+ {
+  "id": "F18",
+  "corte": "SHOT16",
+  "quem": "mãe",
+  "texto": "Since the start of the year, the oven's clean, the fridge smells fresh, and I stopped buying ten different sprays."
+ },
+ {
+  "id": "F19",
+  "corte": "SHOT17",
+  "quem": "filha",
+  "texto": "Tell them what Grandma said."
+ },
+ {
+  "id": "F20",
+  "corte": "SHOT18",
+  "quem": "mãe",
+  "texto": "When she saw my oven, Grandma literally said, don't change a thing. Okay."
+ },
+ {
+  "id": "F21",
+  "corte": "SHOT19",
+  "quem": "filha",
+  "texto": "I'll admit it, hers actually works. The expensive stuff doesn't."
+ },
+ {
+  "id": "F22",
+  "corte": "SHOT20",
+  "quem": "mãe",
+  "texto": "One spoon for the cookies, one for the fridge, one for the pan."
+ },
+ {
+  "id": "F23",
+  "corte": "SHOT21",
+  "quem": "mãe",
+  "texto": "It's La Baleine, all purpose and food grade. Keep one box handy."
+ },
+ {
+  "id": "F24",
+  "corte": "SHOT22",
+  "quem": "filha",
+  "texto": "Follow for more of Mom's kitchen tricks, and try the paste trick this weekend."
+ },
+ {
+  "id": "F25",
+  "corte": "SHOT22",
+  "quem": "mãe",
+  "texto": "Do it the right way this time."
+ }
+]
